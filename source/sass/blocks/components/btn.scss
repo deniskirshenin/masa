@@ -1,0 +1,284 @@
+.btn {
+  display: inline-flex;
+  padding: 3px 3px 3px 29px;
+  gap: 30px;
+
+  color: $color-cerulean-blue;
+
+  background-color: $color-default-white;
+  border: 1px solid $color-cerulean-blue;
+  border-radius: 30px;
+  cursor: pointer;
+
+  transition: opacity $trans-default;
+
+  &:disabled {
+    color: $color-mischka;
+    border: 1px solid $color-mischka;
+    background-color: transparent;
+
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    color: $color-default-white;
+    background-color: $color-cerulean-blue;
+  }
+
+  @include active {
+    color: $color-transparent-white;
+  }
+
+  &--primary-blue {
+    color: $color-default-white;
+    background-color: $color-cerulean-blue;
+    border: 1px solid $color-default-white;
+
+    @include hover-focus {
+      color: $color-cerulean-blue;
+
+      background-color: $color-default-white;
+      border: 1px solid $color-default-white;
+    }
+
+    @include hover-focus {
+      color: $color-transparent-blue;
+
+      background-color: $color-default-white;
+      border: 1px solid $color-default-white;
+    }
+  }
+
+  &--secondary {
+    border-radius: 44px;
+    padding: 10px;
+    color: $color-default-white;
+    background-color: $color-cerulean-blue;
+
+    @include hover-focus {
+      background-color: $color-default-white;
+      color: $color-cerulean-blue;
+    }
+
+    @include active {
+      background-color: $color-default-white;
+      color: $color-transparent-blue;
+    }
+  }
+
+  &--arrow {
+    padding: 6px;
+    color: $color-cerulean-blue;
+    background-color: transparent;
+
+    @include hover-focus {
+      border-radius: 30px;
+      background-color: $color-default-white;
+      color: $color-cerulean-blue;
+    }
+
+    @include active {
+      border-radius: 30px;
+      background-color: $color-default-white;
+      color: $color-transparent-blue;
+    }
+  }
+
+  &--faq-plus {
+    padding: 9px;
+    background-color: $color-cerulean-blue;
+    color: $color-default-white;
+    border: 1px solid $color-cerulean-blue;
+
+    @include hover-focus {
+      color: $color-cerulean-blue;
+      background-color: $color-default-white;
+      border: 1px solid $color-cerulean-blue;
+    }
+
+    @include active {
+      background-color: $color-endeavour;
+      color: $color-default-white;
+      border: 1px solid $color-endeavour;
+    }
+  }
+
+  &--faq-minus {
+    padding: 9px;
+    background-color: $color-default-white;
+    color: $color-cerulean-blue;
+    border: 1px solid $color-default-white;
+
+    @include hover-focus {
+      color: $color-default-white;
+      background-color: transparent;
+      border: 1px solid $color-default-white;
+    }
+
+    @include active {
+      background-color: $color-default-white;
+      color: $color-endeavour;
+      border: 1px solid $color-default-white;
+    }
+  }
+
+  &--footer-menu-item {
+    color: $color-default-black;
+
+    @include hover-focus {
+      color: $color-cerulean-blue;
+    }
+
+    @include active {
+      color: $color-endeavour;
+    }
+  }
+
+  &--footer-menu-item-underlined {
+    color: $color-default-black;
+    border: 1px solid $color-default-black;
+
+    @include hover-focus {
+      color: $color-cerulean-blue;
+      border: 1px solid $color-cerulean-blue;
+    }
+
+    @include active {
+      color: $color-endeavour;
+      border: 1px solid $color-endeavour;
+    }
+  }
+
+  &--menu-item {
+    color: $color-transparent-white;
+
+    @include hover-focus {
+      color: $color-default-white;
+    }
+
+    @include active {
+      opacity: 0.7;
+    }
+  }
+
+  &--menu-item-current {
+    color: $color-default-white;
+
+    @include hover-focus {
+      color: $color-transparent-white;
+    }
+
+    @include active {
+      opacity: 0.7;
+    }
+  }
+
+  &--link-contact {
+    color: $color-default-white;
+    padding: 0 0 5px 0;
+
+    @include hover-focus {
+      color: $color-default-white;
+      padding: 0 0 4px 0;
+      border: 1px solid $color-default-white;
+    }
+
+    @include active {
+      padding: 0 0 5px 0;
+      color: $color-transparent-white;
+    }
+  }
+
+  &--icon {
+    padding: 10px;
+    color: $color-default-white;
+    background-color: $color-cerulean-blue;
+    border-radius: 50px;
+
+    @include hover-focus {
+      color: $color-transparent-white;
+    }
+
+    @include active {
+      background-color: $color-endeavour;
+    }
+  }
+
+  &--pagination-current {
+    padding: 7px;
+    color: $color-default-white;
+    background-color: $color-cerulean-blue;
+    border-radius: 50px;
+
+    @include hover-focus {
+      padding: 6px;
+      color: $color-default-white;
+      background-color: transparent;
+      border: 1px solid $color-cerulean-blue;
+      border-radius: 50px;
+    }
+
+    @include active {
+      padding: 6px;
+      color: $color-default-white;
+      background-color: $color-endeavour;
+      border: 1px solid $color-endeavour;
+      border-radius: 50px;
+    }
+  }
+
+  &--pagination-default {
+    padding: 7px;
+    color: $color-default-white;
+    background-color: $color-transparent-blue-default;
+    border-radius: 50px;
+
+    @include hover-focus {
+      padding: 6px;
+      color: $color-default-white;
+      background-color: transparent;
+      border: 1px solid $color-cerulean-blue;
+      border-radius: 50px;
+    }
+
+    @include active {
+      padding: 6px;
+      color: $color-default-white;
+      background-color: $color-endeavour;
+      border: 1px solid $color-endeavour;
+      border-radius: 50px;
+    }
+  }
+
+  &--tabs-current {
+    padding: 13px;
+    border: 1px solid $color-cerulean-blue;
+    color: $color-cerulean-blue;
+    border-radius: 20px;
+    background-color: transparent;
+
+    @include hover-focus {
+      color: $color-cerulean-blue;
+    }
+
+    @include active {
+      opacity: 0.7;
+    }
+  }
+
+  &--tabs-current {
+    padding: 13px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: transparent;
+    color: $color-transparent-blue-tabs;
+
+    @include hover-focus {
+      color: $color-cerulean-blue;
+    }
+
+    @include active {
+      opacity: 0.7;
+    }
+  }
+}
