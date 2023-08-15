@@ -2,7 +2,9 @@
 <clipPath id="clip0_22_2392">
 <rect width="10" height="10" fill="white" transform="translate(8 0.928711) rotate(45)"/>
 </clipPath>
-</defs><symbol id="arrow-down" viewBox="0 0 22 11"><g fill="none">
+</defs><symbol id="angle" viewBox="0 0 26 26"><g fill="none">
+<path d="M26 0C11.6406 0 0 11.6406 0 26V0H26Z" fill="white"/>
+</g></symbol><symbol id="arrow-down" viewBox="0 0 22 11"><g fill="none">
 <path d="M21 1L11 10L1 1" stroke="currentColor"/>
 </g></symbol><symbol id="arrow-left" viewBox="0 0 11 12"><g fill="none">
 <path d="M11 5.6875H1M1 5.6875L5.96689 11M1 5.6875L5.96689 1" stroke="currentColor"/>

@@ -12,6 +12,10 @@
 
   transition: opacity $trans-default;
 
+  @include vp-1199 {
+    gap: 20px;
+  }
+
   &:disabled {
     color: $color-mischka;
     border: 1px solid $color-mischka;

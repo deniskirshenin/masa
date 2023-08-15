@@ -1,0 +1,231 @@
+.header {
+  position: relative;
+  background-color: transparent;
+  color: $color-cerulean-blue;
+  padding: 30px 0;
+  z-index: 30;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  overflow: scroll;
+
+  &.is-hidden {
+    transform: translateY(-100%);
+  }
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 1240px;
+  margin: 0 auto;
+
+  @include vp-1199 {
+    width: 678px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.header__logo {
+  display: flex;
+}
+
+.is-open .header__logo {
+  position: relative;
+  z-index: 25;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.header__nav {
+  background-color: $color-cerulean-blue;
+  color: $color-default-white;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  left: auto;
+  opacity: 0;
+  margin: 0;
+  width: 286px;
+  height: fit-content;
+  padding: 35px 25px;
+  border-radius: 16px;
+  position: fixed;
+  pointer-events: none;
+  top: 88px;
+  transition: background-color 0.3s ease;
+  right: 100px;
+  visibility: hidden;
+  z-index: 20;
+
+  @include vp-1199 {
+    right: 45px;
+  }
+
+  @include vp-767 {
+    right: auto;
+    left: 15px;
+  }
+
+  .is-open & {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+
+    .header__item {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+.header__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 28px;
+}
+
+.header__item {
+    color: $color-default-white;
+  }
+
+.header__link {
+  font-family: $ff-manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  color: $color-transparent-white;
+}
+
+.header__link--has-children {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.header__sub-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 20px 0 0 16px;
+  gap: 16px;
+}
+
+.header__sub-link {
+  font-family: $ff-manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  color: $color-transparent-white-sub-link;
+}
+
+.header__link--current {
+  color: $color-default-white;
+}
+
+.header__sub-link--current {
+  color: $color-default-white;
+}
+
+.header__burger {
+  width: 148px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 25;
+  padding: 3px 3px 3px 20px;
+
+  @include vp-1199 {
+    width: 134px;
+  }
+}
+
+.is-open .header__burger {
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 0.3s ease 0.2s;
+  border: none;
+  padding: 4px 4px 4px 20px;
+  background-color: $color-cerulean-blue;
+  color: $color-default-white;
+  width: 286px;
+
+  @include vp-767 {
+    width: 290px;
+  }
+}
+
+.header__burger span {
+  text-align: center;
+  font-family: $ff-manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+}
+
+.header__icon-open {
+    min-width: 46px;
+    height: 46px;
+    padding: 12px;
+    transition: opacity 0.3s ease 0.1s;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: $color-cerulean-blue;
+    color: $color-default-white;
+
+    .is-open & {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease 0s;
+    }
+  }
+
+.header__icon-close {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  width: 46px;
+  height: 46px;
+  padding: 13px;
+  transition: opacity 0.3s ease 0.1s;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: $color-default-white;
+  color: $color-cerulean-blue;
+
+  .is-open & {
+    opacity: 1;
+    pointer-events: all;
+    transition: opacity 0.3s ease 0.2s;
+  }
+}
+
+.header__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-menu-form-overlay;
+  display: none;
+  z-index: 1;
+}
+
+.is-open .header__overlay {
+  display: block;
+}
