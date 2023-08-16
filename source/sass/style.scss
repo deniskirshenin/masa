@@ -3,7 +3,7 @@
 
 @import "vendor/normalize";
 // Swiper 7.4.1
-// @import "vendor/swiper";
+@import "vendor/swiper";
 
 // Global
 // ---------------------------------
@@ -28,6 +28,10 @@
 @import "blocks/sections/footer.scss";
 @import "blocks/components/socials.scss";
 @import "blocks/components/copyright.scss";
+@import "blocks/sections/hero.scss";
+@import "blocks/components/overlay.scss";
+@import "blocks/sections/about.scss";
+@import "blocks/components/about-card.scss";
 
 // ---------------------------------
 

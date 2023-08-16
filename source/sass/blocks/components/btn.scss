@@ -16,6 +16,10 @@
     gap: 20px;
   }
 
+  @include vp-767 {
+    padding: 3px 3px 3px 20px;
+  }
+
   &:disabled {
     color: $color-mischka;
     border: 1px solid $color-mischka;

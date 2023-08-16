@@ -337,10 +337,10 @@ button.swiper-pagination-bullet {
   display: inline-block;
   transition: 200ms transform, 200ms top;
 }
-.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
-}
+// .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+// .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+//   margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
+// }
 .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
 .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
   left: 50%;

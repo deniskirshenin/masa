@@ -18,7 +18,6 @@
     <div class="wrapper">
       <header class="header" data-header>
         <div class="container">
-          <div class="header__overlay" id="overlay"></div>
           <div class="header__wrapper">
             <a class="header__logo logo" href="#">
               <svg width="32" height="32">
@@ -83,13 +82,129 @@
         </div>
       </header>
       <main>
+        <h1 class="visually-hidden">«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут.</h1>
         <section class="hero">
+          <div class="hero__wrapper swiper">
+            <div class="swiper-wrapper">
+              <article class="hero__slide hero__slide--first swiper-slide">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="./img/slide-first-image-mobile@1x.jpg 1x, ./img/slide-first-image-mobile@2x.jpg 2x">
+                  <source media="(max-width: 1199px)" srcset="./img/slide-first-image-tablet@1x.jpg 1x, ./img/slide-first-image-tablet@2x.jpg 2x">
+                  <img class="hero__slide-background" src="./img/slide-first-image-desktop@1x.jpg" alt="фон слайда." srcset="./img/slide-first-image-desktop@1x.jpg 1x, ./img/slide-first-image-desktop@2x.jpg 2x">
+                </picture>
+                <div class="hero__slide-wrapper">
+                  <h2>Программы стажировок в&nbsp;крупнейших компаниях Израиля</h2>
+                  <p>Получите незаменимый опыт работы в&nbsp;ведущих израильских компаниях и&nbsp;государственных организациях.</p>
+                  <div class="hero__btn-wrapper">
+                    <a href="#" class="hero__btn btn">
+                      <span>подробнее</span>
+                      <svg class="hero__button-icon" width="10" height="10">
+                        <use xlink:href="./img/sprite.svg#arrow-rotate"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+              <article class="hero__slide hero__slide--second swiper-slide">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="./img/slide-second-image-mobile@1x.jpg 1x, ./img/slide-second-image-mobile@2x.jpg 2x">
+                  <source media="(max-width: 1199px)" srcset="./img/slide-second-image-tablet@1x.jpg 1x, ./img/slide-second-image-tablet@2x.jpg 2x">
+                  <img class="hero__slide-background" src="./img/slide-second-image-desktop@1x.jpg" alt="фон слайда." srcset="./img/slide-second-image-desktop@1x.jpg 1x, ./img/slide-second-image-desktop@2x.jpg 2x">
+                </picture>
+                <div class="hero__slide-wrapper">
+                  <h2>Волонтёрские программы&nbsp;&mdash; внесите свой вклад в&nbsp;общество</h2>
+                  <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и&nbsp;другое.</p>
+                  <div class="hero__btn-wrapper">
+                    <a href="#" class="hero__btn btn">
+                      <span>подробнее</span>
+                      <svg class="hero__button-icon" width="10" height="10">
+                        <use xlink:href="./img/sprite.svg#arrow-rotate"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+              <article class="hero__slide hero__slide--third swiper-slide">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="./img/slide-third-image-mobile@1x.jpg 1x, ./img/slide-third-image-mobile@2x.jpg 2x">
+                  <source media="(max-width: 1199px)" srcset="./img/slide-third-image-tablet@1x.jpg 1x, ./img/slide-third-image-tablet@2x.jpg 2x">
+                  <img class="hero__slide-background" src="./img/slide-third-image-desktop@1x.jpg" alt="фон слайда." srcset="./img/slide-third-image-desktop@1x.jpg 1x, ./img/slide-third-image-desktop@2x.jpg 2x">
+                </picture>
+                <div class="hero__slide-wrapper">
+                  <h2>Глобальный профессиональный опыт обучения за&nbsp;рубежом</h2>
+                  <p>Погрузитесь в&nbsp;академическую программу, проходя практику в&nbsp;Тель-Авиве и&nbsp;ощущая настоящий израильский стиль жизни!</p>
+                  <div class="hero__btn-wrapper">
+                    <a class="hero__btn btn">
+                      <span>подробнее</span>
+                      <svg class="hero__button-icon" width="10" height="10">
+                        <use xlink:href="./img/sprite.svg#arrow-rotate"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="hero__pagination"></div>
+          </div>
+        </section>
+        <section class="about">
+          <h2 class="visually-hidden">О проекте</h2>
           <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
+            <div class="about__wrapper">
+              <article class="about__text">
+                <h3>О&nbsp;проекте &laquo;Маса&raquo;</h3>
+                <p>&laquo;Маса&raquo;&nbsp;&mdash; совместный проект правительства Израиля и&nbsp;Еврейского агентства Сохнут.</p>
+              </article>
+              <article class="about__goal">
+                <h3>Наша цель</h3>
+                <p>Наша деятельность направлена на&nbsp;повышение квалификации молодых специалистов на&nbsp;ранних и&nbsp;средних стадиях карьеры, предоставляя им&nbsp;инструменты для решения сложных проблем, с&nbsp;которыми сталкиваются Израиль и&nbsp;еврейские общины во&nbsp;всем мире. Цель центра&nbsp;&mdash; наделить этих людей способностью инициировать значимые изменения.</p>
+                <button class="btn about__btn" type="button" data-open-modal="popup">
+                  <span>подробнее о&nbsp;проекте</span>
+                  <svg width="10" height="10">
+                    <use xlink:href="./img/sprite.svg#arrow-rotate"></use>
+                  </svg>
+                </button>
+              </article>
+              <ul class="about__list">
+                <li class="about-card">
+                  <div class="about-card__star">
+                    <svg width="22" height="22">
+                      <use xlink:href="./img/sprite.svg#star"></use>
+                    </svg>
+                  </div>
+                  <h3>Более 250 программ</h3>
+                  <p>учебных и&nbsp;рабочих,разной длительностью от&nbsp;3&nbsp;месяцев до&nbsp;1&nbsp;года</p>
+                </li>
+                <li class="about-card">
+                  <div class="about-card__star">
+                    <svg width="22" height="22">
+                      <use xlink:href="./img/sprite.svg#star"></use>
+                    </svg>
+                  </div>
+                  <h3>Более 3000 участников</h3>
+                  <p>уже успешно прошли программу от&nbsp;&laquo;Маса&raquo; и&nbsp;остались в&nbsp;Израиле</p>
+                </li>
+                <li class="about-card">
+                  <div class="about-card__star">
+                    <svg width="22" height="22">
+                      <use xlink:href="./img/sprite.svg#star"></use>
+                    </svg>
+                  </div>
+                  <h3>от&nbsp;4&nbsp;200&nbsp;$
+                    до&nbsp;8&nbsp;400&nbsp;$</h3>
+                  <p>грант всем участникам для комфортного прохождения программы</p>
+                </li>
+                <li class="about-card">
+                  <div class="about-card__star">
+                    <svg width="22" height="22">
+                      <use xlink:href="./img/sprite.svg#star"></use>
+                    </svg>
+                  </div>
+                  <h3>участники из&nbsp;60&nbsp;стран</h3>
+                  <p>студенты со&nbsp;всего мира приезжают на&nbsp;программу &laquo;Маса&raquo;</p>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
       </main>
@@ -156,35 +271,62 @@
         </div>
       </footer>
     </div>
+    <div class="overlay" data-overlay></div>
     <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
+    <dialog class="modal modal--preload" data-modal="popup">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
+          <h2>Напишите нам</h2>
+          <p>Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;&mdash; мы&nbsp;на&nbsp;них ответим!</p>
+          <div class="modal__form" data-form-validate data-callback="base">
+            <form method="post" action="https://echo.htmlacademy.ru/">
+              <div class="custom-input" data-validate-type="text" data-limitation="name" data-required>
+                <label for="name">
+                  <span class="custom-input__label">Имя</span>
+                  <input type="text" name="name" id="name" required>
+                </label>
+              </div>
+              <div class="custom-input" data-validate-type="phone" data-required>
+                <label for="tel">
+                  <span class="custom-input__label">Телефон</span>
+                  <input type="tel" name="tel" id="tel" required>
+                </label>
+              </div>
+              <div class="custom-select" data-select="data-select" data-validate-type="select" data-name="some-name" data-id="id-example-1">
+                <span class="custom-select__error">Выберите тему обращения</span>
+                <span class="custom-select__placeholder">Выберите одну из опций</span>
+                <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span><span class="custom-select__icon"></span></button>
+                <ul class="custom-select__list" role="listbox">
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">Санкт-Петербург</li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Санкт-Петербург</li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Санкт-Петербург</li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Санкт-Петербург</li>
+                </ul>
+              </div>
+              <div class="custom-toggle custom-toggle--checkbox" data-required>
+                <label>
+                  <input type="checkbox" name="checkbox" id="checkbox">
+                  <span class="custom-toggle__icon"></span>
+                    Я согласен на обработку персональных данных
+                </label>
+              </div>
+              <button class="btn" type="submit">
+                <span>отправить</span>
+                <svg width="10" height="10">
+                  <use xlink:href="./img/sprite.svg#arrow-rotate"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
+            <svg width="20" height="20">
+              <use xlink:href="img/sprite.svg#cross"></use>
             </svg>
           </button>
         </div>
       </div>
-    </div>
-
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
+    </dialog>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
