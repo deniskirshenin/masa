@@ -1,0 +1,70 @@
+.instruction-card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px 25px;
+
+  border: 1px solid $color-alabaster;
+  color: $color-alabaster;
+  border-radius: 16px;
+
+  @include vp-1199 {
+    width: 305px;
+    min-height: 92px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    min-height: 58px;
+
+    padding: 24px 25px;
+  }
+}
+
+.instruction-card__number {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: $color-cerulean-blue;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.22px;
+  text-transform: uppercase;
+
+  width: 42px;
+  height: 42px;
+
+  @include vp-767 {
+    top: 6px;
+    padding: 10px;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+}
+
+.instruction-card p {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  color: $color-alabaster;
+
+  margin: 0;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

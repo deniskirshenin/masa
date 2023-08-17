@@ -4,7 +4,7 @@ import {Form} from './modules/form-validate/form';
 import {initAccordions} from './modules/accordion/init-accordion';
 import {initBurger} from './modules/burger/init-burger';
 import {initSubMenu} from './modules/sub-menu/init-sub-menu';
-import {initHeroSwiper} from './modules/swiper/init-swiper';
+import {initHeroSwiper, initProgramSwiper} from './modules/swiper/init-swiper';
 import './modules/select';
 
 
@@ -31,6 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initBurger();
     initSubMenu();
     initHeroSwiper();
+    initProgramSwiper();
   });
 });
 

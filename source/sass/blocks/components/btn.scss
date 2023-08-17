@@ -78,6 +78,7 @@
     padding: 6px;
     color: $color-cerulean-blue;
     background-color: transparent;
+    border: none;
 
     @include hover-focus {
       border-radius: 30px;
