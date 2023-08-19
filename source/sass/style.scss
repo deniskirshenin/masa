@@ -1,6 +1,7 @@
 // Vendor
 // ---------------------------------
 
+@import "vendor/leaflet.scss";
 @import "vendor/normalize";
 // Swiper 7.4.1
 @import "vendor/swiper";
@@ -43,6 +44,8 @@
 @import "blocks/components/data-accordion.scss";
 @import "blocks/sections/reviews.scss";
 @import "blocks/components/review-card.scss";
+@import "blocks/sections/contacts.scss";
+@import "blocks/components/map.scss";
 
 // ---------------------------------
 

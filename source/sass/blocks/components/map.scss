@@ -1,0 +1,64 @@
+.map {
+  min-width: 1200px;
+  width: 1240px;
+  background-color: $color-cerulean-blue;
+
+  border-top: 4px solid $color-transparent-white-line;
+
+
+  @include vp-1199 {
+    min-width: 678px;
+    width: 678px;
+  }
+
+  @include vp-767 {
+    min-width: 100%;
+    width: 100%;
+  }
+}
+
+.map__interactive {
+  display: none;
+}
+
+.map__interactive--active {
+  display: block;
+  width: 100%;
+  height: 500px;
+
+  border-radius: 16px;
+  margin: 40px 0 0 0;
+
+  @include vp-1199 {
+    height: 500px;
+
+    margin: 30px 0 0 0;
+  }
+
+  @include vp-767 {
+    height: 240px;
+
+    margin: 30px 0 0 0;
+  }
+}
+
+.map__static {
+  display: none;
+}
+
+.map__static--nojs {
+  display: block;
+  margin: 78px 0 0 0;
+  height: 500px;
+  border-radius: 16px;
+
+  @include vp-1199 {
+    height: 500px;
+
+    margin: 30px 0 0 0;
+  }
+
+  @include vp-767 {
+    height: 240px;
+  }
+}
