@@ -4,8 +4,9 @@ import {Form} from './modules/form-validate/form';
 import {initAccordions} from './modules/accordion/init-accordion';
 import {initBurger} from './modules/burger/init-burger';
 import {initSubMenu} from './modules/sub-menu/init-sub-menu';
-import {initHeroSwiper, initProgramSwiper} from './modules/swiper/init-swiper';
+import {initHeroSwiper, initNewsSwiper, initProgramSwiper, initReviewSwiper} from './modules/swiper/init-swiper';
 import './modules/select';
+import {initFilter} from './modules/filter/init-filter';
 
 
 // ---------------------------------
@@ -32,6 +33,9 @@ window.addEventListener('DOMContentLoaded', () => {
     initSubMenu();
     initHeroSwiper();
     initProgramSwiper();
+    initNewsSwiper();
+    initFilter();
+    initReviewSwiper();
   });
 });
 

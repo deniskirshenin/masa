@@ -1,0 +1,171 @@
+.review-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  border: 1px solid $color-cerulean-blue;
+  gap: 30px;
+
+  min-width: 604px;
+  max-width: 604px;
+  padding: 49px;
+
+  @include vp-1199 {
+    max-width: 560px;
+    min-width: 560px;
+  }
+
+  @include vp-767 {
+    max-width: 290px;
+    min-width: 290px;
+    padding: 29px 14px;
+    gap: 25px;
+  }
+}
+
+.review-card__personal-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include vp-767 {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+
+.review-card__person {
+  max-width: 194px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+
+  @include vp-767 {
+    max-width: 130px;
+  }
+}
+
+.review-card__person img {
+  border-radius: 90px;
+
+  @include vp-767 {
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+  }
+}
+
+.review-card p {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+
+  color: $color-cerulean-blue;
+
+  @include vp-1199 {
+    font-size: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.review-card__personal-info dl {
+  display: flex;
+  column-gap: 25px;
+  margin: 0;
+}
+
+.review-card__personal-info dt {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0.12px;
+  text-transform: uppercase;
+
+  color: $color-cerulean-blue;
+}
+
+.review-card__personal-info dd {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+
+  margin: 0;
+  color: $color-default-black;
+
+  @include vp-1199 {
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.12px;
+    text-transform: uppercase;
+  }
+}
+
+.review-card__info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+
+  @include vp-767 {
+    gap: 8px;
+  }
+}
+
+.review-card__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  @include vp-767 {
+    gap: 20px;
+  }
+}
+
+.review-card__text-wrapper h3 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+
+  margin: 0;
+
+  @include vp-1199 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.review-card__text-wrapper p {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+
+  margin: 0;
+  color: $color-default-black;
+
+  @include vp-1199 {
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+  }
+}
