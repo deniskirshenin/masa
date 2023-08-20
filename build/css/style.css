@@ -3922,9 +3922,8 @@ button,
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 100%;
+  min-height: 800px;
   margin: 0 auto;
 }
 .hero__slide::after {
@@ -3939,7 +3938,8 @@ button,
 }
 @media (max-width: 1199px) {
   .hero__slide {
-    padding: 173px 0 70px 0;
+    padding: 0;
+    min-height: 1024px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -3951,7 +3951,8 @@ button,
 @media (max-width: 767px) {
   .hero__slide {
     max-width: 100%;
-    padding: 139px 0 30px 0;
+    min-height: 568px;
+    padding: 0;
   }
 }
 
@@ -3971,18 +3972,18 @@ button,
   display: -ms-grid;
   display: grid;
   grid-auto-flow: dense row;
-  -ms-grid-columns: 496px auto;
-  grid-template-columns: 496px auto;
+  -ms-grid-columns: 496px 1fr;
+  grid-template-columns: 496px 1fr;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   margin: 0;
-  padding: 409px 100px 60px 100px;
+  padding: 433px 100px 60px 100px;
 }
 @media (max-width: 1199px) {
   .hero__slide-wrapper {
     margin: 0;
-    padding: 695px 0 60px 0;
+    padding: 714px 0 60px 0;
     -ms-grid-columns: 355px auto;
     grid-template-columns: 355px auto;
   }
@@ -3993,39 +3994,39 @@ button,
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    padding: 259px 15px 20px 15px;
+    padding: 261px 15px 20px 15px;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
 }
 
 .hero__slide--second .hero__slide-wrapper {
-  padding: 435px 100px 60px 100px;
+  padding: 433px 100px 60px 100px;
 }
 @media (max-width: 1199px) {
   .hero__slide--second .hero__slide-wrapper {
     margin: 0;
-    padding: 715px 0 60px 0;
+    padding: 733px 0 60px 0;
   }
 }
 @media (max-width: 767px) {
   .hero__slide--second .hero__slide-wrapper {
-    padding: 259px 15px 20px 15px;
+    padding: 287px 15px 20px 15px;
   }
 }
 
 .hero__slide--first .hero__slide-wrapper {
-  padding: 435px 100px 60px 100px;
+  padding: 433px 100px 60px 100px;
 }
 @media (max-width: 1199px) {
   .hero__slide--first .hero__slide-wrapper {
     margin: 0;
-    padding: 715px 0 60px 0;
+    padding: 733px 0 60px 0;
   }
 }
 @media (max-width: 767px) {
   .hero__slide--first .hero__slide-wrapper {
-    padding: 259px 15px 20px 15px;
+    padding: 287px 15px 20px 15px;
   }
 }
 
@@ -4058,6 +4059,29 @@ button,
   margin: 0;
   z-index: 3;
   word-break: normal;
+}
+.hero__slide h2::after {
+  content: "";
+  position: absolute;
+  background: url("../../../img/svg/angle-desktop-text.svg") no-repeat;
+  width: 26px;
+  height: 26px;
+  right: 200px;
+  bottom: -26px;
+}
+@media (max-width: 1199px) {
+  .hero__slide h2::after {
+    right: 42px;
+  }
+}
+@media (max-width: 767px) {
+  .hero__slide h2::after {
+    background: url("../../../img/svg/angle-mobile.svg") no-repeat;
+    width: 10px;
+    height: 10px;
+    right: 19px;
+    bottom: -10px;
+  }
 }
 @media (max-width: 1199px) {
   .hero__slide h2 {
@@ -4133,10 +4157,24 @@ button,
   -ms-grid-column-span: 1;
   grid-column: span 1;
 }
+.hero__slide p::after {
+  content: "";
+  position: absolute;
+}
+@media (max-width: 767px) {
+  .hero__slide p::after {
+    background: url("../../../img/svg/angle-mobile.svg") no-repeat;
+    width: 10px;
+    height: 10px;
+    right: 69px;
+    bottom: -10px;
+  }
+}
 @media (max-width: 1199px) {
   .hero__slide p {
     line-height: 20px;
     width: 355px;
+    padding: 0 0 27px 40px;
   }
 }
 @media (max-width: 767px) {
@@ -4215,11 +4253,31 @@ button,
   position: absolute;
   left: 100px;
   right: 0;
-  bottom: 0;
   width: 94px;
   border-radius: 20px 20px 0px 0px;
   margin: 0;
   z-index: 2;
+}
+.hero .hero__pagination::after {
+  content: "";
+  position: absolute;
+  background: url("../../../img/svg/angle-desktop.svg") no-repeat;
+  width: 20px;
+  height: 20px;
+  right: -20px;
+  bottom: 0;
+}
+@media (max-width: 767px) {
+  .hero .hero__pagination::after {
+    background: url("../../../img/svg/angle-mobile.svg") no-repeat;
+    width: 10px;
+    height: 10px;
+    right: -10px;
+    bottom: 0;
+    -webkit-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
 }
 @media (max-width: 1199px) {
   .hero .hero__pagination {
@@ -4227,13 +4285,12 @@ button,
         -ms-flex-pack: center;
             justify-content: center;
     left: 54px;
-    bottom: 365px;
     gap: 6px;
   }
 }
 @media (max-width: 767px) {
   .hero .hero__pagination {
-    bottom: 40px;
+    left: 15px;
     gap: 4px;
   }
 }
@@ -6437,6 +6494,11 @@ button,
 @media (max-width: 1199px) {
   .contact-form__img {
     top: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .contact-form__img {
+    display: none;
   }
 }
 

@@ -2,6 +2,7 @@ import Swiper from '../../vendor/swiper';
 
 const hero = document.querySelector('.hero__wrapper');
 const heroPagination = document.querySelector('.hero__pagination');
+let heroSwiper;
 
 const program = document.querySelector('.programs__slider-wrapper');
 const programNextButton = document.querySelector('.programs__button-next');
@@ -18,17 +19,41 @@ const reviewNextButton = document.querySelector('.reviews__button-next');
 const reviewPrevButton = document.querySelector('.reviews__button-prev');
 const reviewScrollbar = document.querySelector('.reviews__scrollbar');
 
-const initHeroSwiper = () => new Swiper(hero, {
-  cssMode: true,
-  loop: true,
-  slidesPerView: 1,
-  speed: 300,
-  pagination: {
-    el: heroPagination,
-    clickable: true,
-    type: 'bullets',
-  },
-});
+const setContentHeightAndPosition = (swiper) => {
+  const activeSlide = swiper.slides[swiper.activeIndex];
+  const headerHeight = activeSlide.querySelector('h2').offsetHeight;
+  const textHeight = activeSlide.querySelector('p').offsetHeight;
+  const buttonHeight = activeSlide.querySelector('.hero__btn-wrapper').offsetHeight;
+  let contentHeight;
+  if (window.innerWidth <= 767) {
+    contentHeight = headerHeight + textHeight + buttonHeight + 20;
+  } else if (window.innerWidth <= 1199) {
+    contentHeight = headerHeight + textHeight + 60;
+  } else {
+    contentHeight = headerHeight + textHeight + 60;
+  }
+
+  heroPagination.style.bottom = contentHeight + 'px';
+};
+
+const initHeroSwiper = () => {
+  heroSwiper = new Swiper(hero, {
+    loop: true,
+    slidesPerView: 1,
+    speed: 300,
+    pagination: {
+      el: heroPagination,
+      clickable: true,
+      type: 'bullets',
+    },
+  });
+
+  setContentHeightAndPosition(heroSwiper);
+
+  heroSwiper.on('slideChange', () => {
+    setContentHeightAndPosition(heroSwiper);
+  });
+};
 
 const initProgramSwiper = () => new Swiper(program, {
   direction: 'horizontal',
