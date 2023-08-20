@@ -13,14 +13,6 @@
     width: 100%;
   }
 
-  &:last-of-type {
-    padding: 14px 0 58px 36px;
-
-    @media screen and (max-width: 767px) {
-      padding: 14px 0 58px 0;
-    }
-  }
-
   input {
     position: absolute;
 
@@ -57,6 +49,10 @@
 
       transition: border 0.3s ease;
 
+      &--dark {
+        border: 1px solid $color-default-white;
+      }
+
       &::before {
         content: "";
         position: absolute;
@@ -85,6 +81,16 @@
     }
   }
 
+  input:checked + .custom-toggle__icon--dark {
+    border: 1.5px solid $color-default-white;
+
+    &::before {
+      background: url("../../img/svg/tick.svg") no-repeat center;
+      background-size: 10px 10px;
+      background-color: $color-default-white;
+    }
+  }
+
   &.is-invalid {
     label span {
       color: #ff1553;
@@ -103,5 +109,25 @@
     &.is-valid {
       color: #15ab07;
     }
+  }
+}
+
+.custom-toggle--checkbox-form {
+  max-width: 350px;
+  padding: 0;
+}
+
+.custom-toggle--checkbox-form label {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+  opacity: 0.9;
+  color: $color-default-white;
+  padding: 5px 0 5px 30px;
+
+  @include vp-767 {
+    line-height: 14px;
+    padding: 0 0 0 50px;
   }
 }
