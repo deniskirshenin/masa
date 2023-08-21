@@ -6,7 +6,6 @@ import {initBurger} from './modules/burger/init-burger';
 import {initSubMenu} from './modules/sub-menu/init-sub-menu';
 import {initHeroSwiper, initNewsSwiper, initProgramSwiper, initReviewSwiper} from './modules/swiper/init-swiper';
 import './modules/select';
-import {initFilter} from './modules/filter/init-filter';
 import {initMap} from './modules/map/init-map';
 
 
@@ -35,7 +34,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initHeroSwiper();
     initProgramSwiper();
     initNewsSwiper();
-    initFilter();
     initReviewSwiper();
     initMap();
   });

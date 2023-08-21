@@ -1,58 +1,33 @@
-const allTab = document.querySelector('.news__tabs-button--all');
-const volunteerTab = document.querySelector('.news__tabs-button--volunteer');
-const trainingTab = document.querySelector('.news__tabs-button--training');
-const careerTab = document.querySelector('.news__tabs-button--career');
-const travellingTab = document.querySelector('.news__tabs-button--travelling');
+const initFilter = (slidesContainer, slides, swiper) => {
+  const tabButtons = document.querySelectorAll('.news__tabs-button');
 
-const newsCards = document.querySelectorAll('.news-card');
+  tabButtons.forEach((tabButton) => {
+    tabButton.addEventListener('click', () => {
+      const filter = tabButton.getAttribute('data-filter');
+      tabButtons.forEach((btn) => {
+        btn.classList.remove('btn--tabs-current');
+      });
 
-const newsCardsArray = Array.from(newsCards);
+      tabButton.classList.add('btn--tabs-current');
 
-const initFilter = () => {
-  allTab.addEventListener('click', () => {
-    newsCardsArray.forEach((newsCard) => {
-      newsCard.classList.remove('news-card--remove');
-      newsCard.classList.add('news-card--show');
-    });
-  });
+      slidesContainer.innerHTML = '';
 
-  volunteerTab.addEventListener('click', () => {
-    newsCardsArray.forEach((newsCard) => {
-      newsCard.classList.remove('news-card--remove');
-
-      if (!newsCard.dataset.volunteer) {
-        newsCard.classList.add('news-card--remove');
+      if (filter === 'all') {
+        slides.forEach(function (slide) {
+          slidesContainer.appendChild(slide);
+        });
+      } else {
+        slides.forEach(function (slide) {
+          const category = slide.getAttribute('data-category');
+          if (category === filter) {
+            slidesContainer.appendChild(slide);
+          }
+        });
       }
-    });
-  });
 
-  trainingTab.addEventListener('click', () => {
-    newsCardsArray.forEach((newsCard) => {
-      newsCard.classList.remove('news-card--remove');
-
-      if (!newsCard.dataset.training) {
-        newsCard.classList.add('news-card--remove');
-      }
-    });
-  });
-
-  careerTab.addEventListener('click', () => {
-    newsCardsArray.forEach((newsCard) => {
-      newsCard.classList.remove('news-card--remove');
-
-      if (!newsCard.dataset.career) {
-        newsCard.classList.add('news-card--remove');
-      }
-    });
-  });
-
-  travellingTab.addEventListener('click', () => {
-    newsCardsArray.forEach((newsCard) => {
-      newsCard.classList.remove('news-card--remove');
-
-      if (!newsCard.dataset.travelling) {
-        newsCard.classList.add('news-card--remove');
-      }
+      swiper.updateSlides();
+      swiper.update();
+      swiper.updateSize();
     });
   });
 };

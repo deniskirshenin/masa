@@ -1,18 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
-<clipPath id="clip0_833_2596">
-<rect width="10" height="10" fill="white"/>
-</clipPath>
-</defs><symbol id="arrow-down" viewBox="0 0 22 11"><g fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="arrow-down" viewBox="0 0 22 11"><g fill="none">
 <path d="M21 1L11 10L1 1" stroke="currentColor"/>
 </g></symbol><symbol id="arrow-left" viewBox="0 0 11 12"><g fill="none">
 <path d="M11 5.6875H1M1 5.6875L5.96689 11M1 5.6875L5.96689 1" stroke="currentColor"/>
 </g></symbol><symbol id="arrow-right" viewBox="0 0 11 12"><g fill="none">
 <path d="M0 5.6875H10M10 5.6875L5.03311 11M10 5.6875L5.03311 1" stroke="currentColor"/>
-</g></symbol><symbol id="arrow-rotate" viewBox="0 0 10 10"><g fill="none">
-<g clip-path="url(#clip0_833_2596)">
-<path d="M1 9L9 1M9 1H1.05298M9 1V8.94702" stroke="white"/>
-</g>
-
+</g></symbol><symbol id="arrow-rotate" viewBox="0 0 13 12"><g fill="none">
+<path d="M0.343146 5.99963H11.6569M11.6569 5.99963L6.03746 0.380236M11.6569 5.99963L6.03746 11.619" stroke="currentColor"/>
 </g></symbol><symbol id="arrow" viewBox="0 0 22 22"><g fill="none">
 <path d="M1 21L21 1M21 1H1.13245M21 1V20.8676" stroke="currentColor"/>
 </g></symbol><symbol id="cross" viewBox="0 0 20 20"><g fill="none">

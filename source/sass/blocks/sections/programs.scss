@@ -5,7 +5,8 @@
 }
 
 .programs__wrapper {
-  width: 1240px;
+  min-width: 1200px;
+  max-width: 1240px;
   display: grid;
   grid-auto-flow: dense row;
   grid-template-columns: repeat(auto-fit, minmax(84px, 1fr));
@@ -50,9 +51,12 @@
   display: flex;
   flex-direction: column;
   grid-column: span 10;
+  grid-column-start: 1;
+  grid-column-end: -1;
   grid-row-start: 2;
   gap: 40px;
-  width: 1240px;
+  min-width: 1200px;
+  max-width: 100%;
 
   @include vp-1199 {
     width: 100%;
@@ -86,13 +90,14 @@
 
 .programs__scrollbar .swiper-scrollbar-drag {
   background-color: $color-cerulean-blue;
-  min-height: 2px;
+  min-height: 4px;
 }
 
 .programs__button-wrapper {
   margin: 0 0 0 52px;
   grid-column: span 1;
   grid-column-start: 11;
+  grid-column-end: -1;
   grid-row-start: 3;
   width: 54px;
   margin: 0 0 0 auto;
@@ -117,6 +122,7 @@
   grid-column: span 3;
   grid-column-start: 10;
   grid-row-start: 1;
+  grid-column-end: -1;
   margin: 0 0 0 auto;
 
   @include vp-1199 {

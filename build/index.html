@@ -98,7 +98,7 @@
                   <div class="hero__btn-wrapper">
                     <a href="#" class="hero__btn btn">
                       <span>подробнее</span>
-                      <svg class="hero__button-icon" width="10" height="10">
+                      <svg class="btn__icon" width="10" height="10">
                         <use xlink:href="./img/sprite.svg#arrow-rotate"></use>
                       </svg>
                     </a>
@@ -227,7 +227,7 @@
                   <h3>Стажировки</h3>
                   <p>Получите незаменимый опыт работы в&nbsp;крупнейших израильских компаниях.</p>
                   <div class="program-card__btn-wrapper">
-                    <a class="btn btn--icon program-card__btn" href="#">
+                    <a class="btn btn--secondary program-card__btn" href="#">
                       <svg width="10" height="10">
                         <use xlink:href="./img/sprite.svg#arrow-rotate"></use>
                       </svg>
@@ -243,7 +243,7 @@
                   <h3>Волонтёрство</h3>
                   <p>Помогайте другим и&nbsp;развивайте свои лидерские качества.</p>
                   <div class="program-card__btn-wrapper">
-                    <a class="btn btn--icon program-card__btn" href="#">
+                    <a class="btn btn--secondary program-card__btn" href="#">
                       <svg width="10" height="10">
                         <use xlink:href="./img/sprite.svg#arrow-rotate"></use>
                       </svg>
@@ -259,7 +259,7 @@
                   <h3>Учёба</h3>
                   <p>Получите образование и&nbsp;измените свое будущее.</p>
                   <div class="program-card__btn-wrapper">
-                    <a class="btn btn--icon program-card__btn" href="#">
+                    <a class="btn btn--secondary program-card__btn" href="#">
                       <svg width="10" height="10">
                         <use xlink:href="./img/sprite.svg#arrow-rotate"></use>
                       </svg>
@@ -275,7 +275,7 @@
                   <h3>Учёба</h3>
                   <p>Получите образование и&nbsp;измените свое будущее.</p>
                   <div class="program-card__btn-wrapper">
-                    <a class="btn btn--icon program-card__btn" href="#">
+                    <a class="btn btn--secondary program-card__btn" href="#">
                       <svg width="10" height="10">
                         <use xlink:href="./img/sprite.svg#arrow-rotate"></use>
                       </svg>
@@ -291,7 +291,7 @@
                   <h3>Учёба</h3>
                   <p>Получите образование и&nbsp;измените свое будущее.</p>
                   <div class="program-card__btn-wrapper">
-                    <a class="btn btn--icon program-card__btn" href="#">
+                    <a class="btn btn--secondary program-card__btn" href="#">
                       <svg width="10" height="10">
                         <use xlink:href="./img/sprite.svg#arrow-rotate"></use>
                       </svg>
@@ -307,7 +307,7 @@
                   <h3>Учёба</h3>
                   <p>Получите образование и&nbsp;измените свое будущее.</p>
                   <div class="program-card__btn-wrapper">
-                    <a class="btn btn--icon program-card__btn" href="#">
+                    <a class="btn btn--secondary program-card__btn" href="#">
                       <svg width="10" height="10">
                         <use xlink:href="./img/sprite.svg#arrow-rotate"></use>
                       </svg>
@@ -323,7 +323,7 @@
                   <h3>Учёба</h3>
                   <p>Получите образование и&nbsp;измените свое будущее.</p>
                   <div class="program-card__btn-wrapper">
-                    <a class="btn btn--icon program-card__btn" href="#">
+                    <a class="btn btn--secondary program-card__btn" href="#">
                       <svg width="10" height="10">
                         <use xlink:href="./img/sprite.svg#arrow-rotate"></use>
                       </svg>
@@ -388,17 +388,16 @@
             <div class="news__wrapper">
               <h2>Новости и&nbsp;материалы</h2>
               <div class="news__tabs-buttons">
-                <button class="btn btn--tabs news__tabs-button news__tabs-button--all">общее</button>
-                <button class="btn btn--tabs news__tabs-button news__tabs-button--volunteer">Волонтёрство</button>
-                <button class="btn btn--tabs news__tabs-button news__tabs-button--training">Стажировки</button>
-                <button class="btn btn--tabs news__tabs-button news__tabs-button--career">Карьера</button>
-                <button class="btn btn--tabs news__tabs-button news__tabs-button--travelling">путешествия</button>
+                <button class="btn btn--tabs btn--tabs-current news__tabs-button" data-filter="all">общее</button>
+                <button class="btn btn--tabs news__tabs-button" data-filter="volunteer">Волонтёрство</button>
+                <button class="btn btn--tabs news__tabs-button" data-filter="training">Стажировки</button>
+                <button class="btn btn--tabs news__tabs-button" data-filter="career">Карьера</button>
+                <button class="btn btn--tabs news__tabs-button" data-filter="travelling">путешествия</button>
               </div>
               <div class="news__slider-wrapper swiper">
                 <div class="swiper-wrapper">
-                  <article class="news-card news-card--first swiper-slide" data-training="training">
+                  <article class="news-card news-card--first swiper-slide" data-category="training">
                     <picture>
-                      <source media="(max-width: 767px)" srcset="./img/news-first-slide-mobile@1x.jpg 1x, ./img/news-first-slide-mobile@2x.jpg 2x">
                       <source media="(max-width: 1199px)" srcset="./img/news-first-slide-tablet@1x.jpg 1x, ./img/news-first-slide-tablet@2x.jpg 2x">
                       <img class="news-card__img" src="./img/news-first-slide-desktop@1x.jpg" alt="Молодые люди ведут беседу." srcset="./img/news-first-slide-desktop@1x.jpg 1x, ./img/news-first-slide-desktop@2x.jpg 2x">
                     </picture>
@@ -406,33 +405,15 @@
                     <h3>Интервью с&nbsp;участницей программы стажировки</h3>
                     <p>Саша рассказывает, как попала в&nbsp;программу и&nbsp;как прошла 6-месячная стажировка в&nbsp;ISOFound</p>
                     <div class="news-card__btn-wrapper">
-                      <a class="btn btn--icon news-card__btn" href="#">
+                      <a class="btn btn--secondary news-card__btn" href="#">
                         <svg width="10" height="10">
                           <use xlink:href="./img/sprite.svg#arrow-rotate"></use>
                         </svg>
                       </a>
                     </div>
                   </article>
-                  <article class="news-card swiper-slide" data-travelling="travelling">
+                  <article class="news-card swiper-slide" data-category="volunteer">
                     <picture>
-                      <source media="(max-width: 767px)" srcset="./img/news-second-slide-mobile@1x.jpg 1x, ./img/news-second-slide-mobile@2x.jpg 2x">
-                      <source media="(max-width: 1199px)" srcset="./img/news-second-slide-tablet@1x.jpg 1x, ./img/news-second-slide-tablet@2x.jpg 2x">
-                      <img class="news-card__img" src="./img/news-second-slide-desktop@1x.jpg" alt="Молодые люди ведут беседу." srcset="./img/news-second-slide-desktop@1x.jpg 1x, ./img/news-second-slide-desktop@2x.jpg 2x">
-                    </picture>
-                    <span>20/03/2023</span>
-                    <h3>Путешествуем по&nbsp;Израилю</h3>
-                    <p>Какие места посещают наши студенты весной</p>
-                    <div class="news-card__btn-wrapper">
-                      <a class="btn btn--icon news-card__btn" href="#">
-                        <svg width="10" height="10">
-                          <use xlink:href="./img/sprite.svg#arrow-rotate"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </article>
-                  <article class="news-card swiper-slide" data-volunteer="volunteer">
-                    <picture>
-                      <source media="(max-width: 767px)" srcset="./img/news-third-slide-mobile@1x.jpg 1x, ./img/news-third-slide-mobile@2x.jpg 2x">
                       <source media="(max-width: 1199px)" srcset="./img/news-third-slide-tablet@1x.jpg 1x, ./img/news-third-slide-tablet@2x.jpg 2x">
                       <img class="news-card__img" src="./img/news-third-slide-desktop@1x.jpg" alt="Молодые люди ведут беседу." srcset="./img/news-third-slide-desktop@1x.jpg 1x, ./img/news-third-slide-desktop@2x.jpg 2x">
                     </picture>
@@ -440,16 +421,31 @@
                     <h3>Новая программа волонтёрства</h3>
                     <p>Программа помощи детям длительностью 4&nbsp;месяца</p>
                     <div class="news-card__btn-wrapper">
-                      <a class="btn btn--icon news-card__btn" href="#">
+                      <a class="btn btn--secondary news-card__btn" href="#">
                         <svg width="10" height="10">
                           <use xlink:href="./img/sprite.svg#arrow-rotate"></use>
                         </svg>
                       </a>
                     </div>
                   </article>
-                  <article class="news-card swiper-slide" data-career="career">
+                  <article class="news-card swiper-slide" data-category="travelling">
                     <picture>
-                      <source media="(max-width: 767px)" srcset="./img/news-fourth-slide-mobile@1x.jpg 1x, ./img/news-fourth-slide-mobile@2x.jpg 2x">
+                      <source media="(max-width: 1199px)" srcset="./img/news-second-slide-tablet@1x.jpg 1x, ./img/news-second-slide-tablet@2x.jpg 2x">
+                      <img class="news-card__img" src="./img/news-second-slide-desktop@1x.jpg" alt="Молодые люди ведут беседу." srcset="./img/news-second-slide-desktop@1x.jpg 1x, ./img/news-second-slide-desktop@2x.jpg 2x">
+                    </picture>
+                    <span>20/03/2023</span>
+                    <h3>Путешествуем по&nbsp;Израилю</h3>
+                    <p>Какие места посещают наши студенты весной</p>
+                    <div class="news-card__btn-wrapper">
+                      <a class="btn btn--secondary news-card__btn" href="#">
+                        <svg width="10" height="10">
+                          <use xlink:href="./img/sprite.svg#arrow-rotate"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </article>
+                  <article class="news-card swiper-slide" data-category="career">
+                    <picture>
                       <source media="(max-width: 1199px)" srcset="./img/news-fourth-slide-tablet@1x.jpg 1x, ./img/news-fourth-slide-tablet@2x.jpg 2x">
                       <img class="news-card__img" src="./img/news-fourth-slide-desktop@1x.jpg" alt="Молодые люди ведут беседу." srcset="./img/news-fourth-slide-desktop@1x.jpg 1x, ./img/news-fourth-slide-desktop@2x.jpg 2x">
                     </picture>
@@ -457,41 +453,7 @@
                     <h3>Построй свою карьеру</h3>
                     <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
                     <div class="news-card__btn-wrapper">
-                      <a class="btn btn--icon news-card__btn" href="#">
-                        <svg width="10" height="10">
-                          <use xlink:href="./img/sprite.svg#arrow-rotate"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </article>
-                  <article class="news-card swiper-slide" data-career="career">
-                    <picture>
-                      <source media="(max-width: 767px)" srcset="./img/news-fourth-slide-mobile@1x.jpg 1x, ./img/news-fourth-slide-mobile@2x.jpg 2x">
-                      <source media="(max-width: 1199px)" srcset="./img/news-fourth-slide-tablet@1x.jpg 1x, ./img/news-fourth-slide-tablet@2x.jpg 2x">
-                      <img class="news-card__img" src="./img/news-fourth-slide-desktop@1x.jpg" alt="Молодые люди ведут беседу." srcset="./img/news-fourth-slide-desktop@1x.jpg 1x, ./img/news-fourth-slide-desktop@2x.jpg 2x">
-                    </picture>
-                    <span>10/03/2023</span>
-                    <h3>Построй свою карьеру</h3>
-                    <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
-                    <div class="news-card__btn-wrapper">
-                      <a class="btn btn--icon news-card__btn" href="#">
-                        <svg width="10" height="10">
-                          <use xlink:href="./img/sprite.svg#arrow-rotate"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </article>
-                  <article class="news-card swiper-slide" data-career="career">
-                    <picture>
-                      <source media="(max-width: 767px)" srcset="./img/news-fourth-slide-mobile@1x.jpg 1x, ./img/news-fourth-slide-mobile@2x.jpg 2x">
-                      <source media="(max-width: 1199px)" srcset="./img/news-fourth-slide-tablet@1x.jpg 1x, ./img/news-fourth-slide-tablet@2x.jpg 2x">
-                      <img class="news-card__img" src="./img/news-fourth-slide-desktop@1x.jpg" alt="Молодые люди ведут беседу." srcset="./img/news-fourth-slide-desktop@1x.jpg 1x, ./img/news-fourth-slide-desktop@2x.jpg 2x">
-                    </picture>
-                    <span>10/03/2023</span>
-                    <h3>Построй свою карьеру</h3>
-                    <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
-                    <div class="news-card__btn-wrapper">
-                      <a class="btn btn--icon news-card__btn" href="#">
+                      <a class="btn btn--secondary news-card__btn" href="#">
                         <svg width="10" height="10">
                           <use xlink:href="./img/sprite.svg#arrow-rotate"></use>
                         </svg>
@@ -781,9 +743,10 @@
                     </label>
                   </div>
                   <div class="custom-select custom-select--dark-bg" data-select="data-select" data-validate-type="select" data-name="some-name" data-id="id-example-1">
-                    <span class="custom-select__error">Выберите город</span>
-                    <span class="custom-select__placeholder"></span>
-                    <button class="custom-select__button custom-select__button--dark-bg" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span><span class="custom-select__icon"></span></button>
+                    <button class="custom-select__button custom-select__button--dark-bg" type="button" aria-label="Выберите одну из опций">
+                      <span class="custom-select__text custom-select__text--dark-bg"></span>
+                      <span class="custom-select__icon custom-select__icon--dark-bg"></span>
+                    </button>
                     <ul class="custom-select__list custom-select__list--dark-bg" role="listbox">
                       <li class="custom-select__item custom-select__item--dark-bg" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">Санкт-Петербург</li>
                       <li class="custom-select__item custom-select__item--dark-bg" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Санкт-Петербург</li>
@@ -798,10 +761,10 @@
                         Я согласен на обработку моих персональных данных
                     </label>
                   </div>
-                  <button class="btn contact-form__button" type="submit">
+                  <button class="btn btn--primary-blue contact-form__button" type="submit">
                     <span>Отправить</span>
-                    <svg class="btn__icon" width="10" height="10">
-                      <use xlink:href="./img/sprite.svg#arrow-rotate.svg"></use>
+                    <svg class="btn__icon btn__icon--dark-bg" width="10" height="10">
+                      <use xlink:href="./img/sprite.svg#arrow-rotate"></use>
                     </svg>
                   </button>
                 </form>

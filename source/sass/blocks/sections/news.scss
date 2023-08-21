@@ -18,6 +18,44 @@
     height: 100%;
     padding: 100px 45px;
   }
+
+  @include vp-767 {
+    min-width: 100%;
+    max-width: 100%;
+    padding: 67px 15px;
+  }
+}
+
+.news__wrapper .swiper-slide[data-category="training"] {
+  order: 0;
+
+  @include vp-767 {
+    order: 1;
+  }
+}
+
+.news__wrapper .swiper-slide[data-category="travelling"] {
+  order: 1;
+
+  @include vp-767 {
+    order: 3;
+  }
+}
+
+.news__wrapper .swiper-slide[data-category="volunteer"] {
+  order: 2;
+
+  @include vp-767 {
+    order: 2;
+  }
+}
+
+.news__wrapper .swiper-slide[data-category="career"] {
+  order: 3;
+
+  @include vp-767 {
+    order: 4;
+  }
 }
 
 .news__wrapper h2 {
@@ -34,12 +72,20 @@
   @include vp-1199 {
     font-size: 34px;
   }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 20px;
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
 }
 
 .news__tabs-buttons {
   display: flex;
   gap: 30px;
   grid-column: span 3;
+  justify-content: center;
 
   width: 810px;
   margin: 0 auto;
@@ -47,6 +93,12 @@
   @include vp-1199 {
     width: 678px;
     gap: 10px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    overflow: scroll;
+    justify-content: flex-start;
   }
 }
 
@@ -57,16 +109,33 @@
   @include vp-1199 {
     width: 678px;
   }
+
+  @include vp-767 {
+    width: 290px;
+    max-width: 290px;
+    margin: 0 auto;
+    grid-column: span 1;
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
 }
 
 .news__button-prev {
   grid-column: span 1;
   max-height: 22px;
+
+  @include vp-767 {
+    grid-column-start: 1;
+  }
 }
 
 .news__button-next {
   grid-column: span 1;
   max-height: 22px;
+
+  @include vp-767 {
+    grid-column-start: 3;
+  }
 }
 
 .news__pagination {
@@ -75,6 +144,14 @@
   align-items: center;
   grid-column: span 1;
   gap: 20px;
+
+  @include vp-767 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    gap: 16px;
+    min-width: 100%;
+    max-width: 100%;
+  }
 }
 
 .news__pagination .swiper-pagination-bullet {
@@ -92,6 +169,20 @@
   opacity: 1;
   background-color: $color-alabaster;
   border-radius: 0;
+
+  @include hover-focus {
+    border: 1px solid $color-cerulean-blue;
+    border-radius: 20px;
+    color: $color-cerulean-blue;
+    background-color: transparent;
+  }
+
+  @include active {
+    border: 1px solid $color-endeavour;
+    background-color: $color-endeavour;
+    border-radius: 20px;
+    color: $color-default-white;
+  }
 }
 
 .news__pagination .swiper-pagination-bullet-active {
@@ -109,4 +200,18 @@
   opacity: 1;
   background-color: $color-cerulean-blue;
   border-radius: 20px;
+
+  @include hover-focus {
+    border: 1px solid $color-cerulean-blue;
+    border-radius: 20px;
+    color: $color-cerulean-blue;
+    background-color: transparent;
+  }
+
+  @include active {
+    border: 1px solid $color-endeavour;
+    background-color: $color-endeavour;
+    border-radius: 20px;
+    color: $color-default-white;
+  }
 }

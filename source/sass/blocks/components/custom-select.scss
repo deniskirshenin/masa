@@ -5,11 +5,6 @@
   padding: 14px 0 28px;
   margin: 0 0 44px 0;
 
-  @media screen and (max-width: 767px) {
-    padding: 4px 0 14px;
-    width: 100%;
-  }
-
   &__label {
     position: absolute;
     top: 50%;
@@ -18,22 +13,6 @@
     transform: translateY(-50%);
 
     transition: transform 0.3s ease, opacity  0.3s ease;
-
-    pointer-events: none;
-
-    @media screen and (max-width: 767px) {
-      transform: translateY(calc(-50% - 5px));
-    }
-  }
-
-  &__placeholder {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-
-    transform: translateY(-50%);
-
-    transition: transform 0.3s ease, opacity 0.3s ease;
 
     pointer-events: none;
 
@@ -59,35 +38,6 @@
     clip-path: inset(100%);
   }
 
-  &__button {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 48px;
-    padding: 5px 10px;
-
-    background-color: rgba(255, 255, 255, 0);
-    border: 2px solid rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    outline: none;
-    cursor: pointer;
-
-    transition: border 0.3s ease;
-
-    &:hover {
-      border: 2px solid rgba(0, 0, 0, 0.5);
-    }
-
-    &:focus {
-      border: 2px solid rgba(0, 0, 0, 0.8);
-    }
-
-    &:disabled {
-      pointer-events: none;
-      opacity: 0.3;
-    }
-  }
-
   &__list {
     position: absolute;
     bottom: 10px;
@@ -108,51 +58,6 @@
     opacity: 0;
 
     transition: visibility 0.3s ease, opacity 0.3s ease;
-  }
-
-  &__item {
-    padding: 5px;
-
-    outline: none;
-    cursor: pointer;
-
-    transition: background-color 0.3s ease;
-
-    &[aria-selected="true"] {
-      background-color: rgba(0, 0, 0, 0.2);
-
-      @media (hover: hover) {
-        &:hover:not(.focus-visible) {
-          background-color: rgba(0, 0, 0, 0.2);
-        }
-      }
-
-      &.focus-visible:focus {
-        background-color: rgba(0, 0, 0, 0.2);
-      }
-    }
-
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        background-color: rgba(0, 0, 0, 0.4);
-      }
-    }
-
-    &.focus-visible:focus {
-      background-color: rgba(0, 0, 0, 0.4);
-    }
-  }
-
-  &__error {
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-
-    color: #ff1553;
-
-    opacity: 0;
-
-    transition: opacity 0.1s ease;
   }
 
   &__text {
@@ -227,51 +132,6 @@
     .custom-select__label {
       opacity: 0;
     }
-
-    .custom-select__placeholder {
-      opacity: 0;
-    }
-  }
-
-  &.is-invalid {
-    .custom-select__error {
-      opacity: 1;
-    }
-
-    .custom-select__button {
-      border: 2px solid #ff1553;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba(#ff1553, 0.5);
-      }
-    }
-  }
-
-  /* &.is-valid {
-    .custom-select__button {
-      border: 2px solid $color-eucalyptus;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba($color-eucalyptus, 0.5);
-      }
-    }
-  } */
-
-  &--placeholder {
-    .custom-select__label {
-      transform: translateY(calc(-50% - 40px));
-      opacity: 1;
-    }
-
-    &.is-open .custom-select__label {
-      opacity: 1;
-    }
-
-    &.not-empty .custom-select__label {
-      opacity: 1;
-    }
   }
 
   &.slide-up.not-empty,
@@ -311,10 +171,33 @@
   }
 }
 
+.custom-select__button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  padding: 16px 19px;
+  background-color: transparent;
+
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+
+  transition: border 0.3s ease;
+}
+
 .custom-select__button--dark-bg {
   border: 1px solid $color-transparent-white-select;
   border-radius: 8px;
-  padding: 17px 20px;
+  padding: 16px 19px;
+}
+
+.custom-select__text--dark-bg {
+  color: $color-alabaster;
+}
+
+.custom-select__icon--dark-bg {
+  background-color: $color-alabaster;
 }
 
 .custom-select__list--dark-bg {
@@ -324,6 +207,25 @@
   padding: 1px;
   bottom: -4px;
   max-height: 192px;
+}
+
+.custom-select__item {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  color: $color-default-white;
+  padding: 17px 20px;
+
+  outline: none;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+}
+
+.custom-select__item[aria-selected="true"] {
+  background-color: $color-cerulean-blue;
+  color: $color-default-white;
 }
 
 .custom-select__item--dark-bg {

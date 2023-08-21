@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 100%;
 
   @include vp-1199 {
     width: 100%;
@@ -12,127 +13,22 @@
     width: 90%;
     margin: 0 auto;
   }
+}
 
-  &__element:last-child {
-    margin-bottom: 0;
-  }
+.accordion__element {
+  display: grid;
 
-  &__element {
-    display: grid;
+  grid-template-columns: 640px 1fr;
+  column-gap: 10px;
+  border-radius: 16px;
+  border: 1px solid $color-cerulean-blue;
+  padding: 40px;
+  cursor: pointer;
 
-    grid-template-columns: 1fr 40px;
-    column-gap: 10px;
-    border-radius: 16px;
-    border: 1px solid $color-cerulean-blue;
-    padding: 40px;
-
-    @include vp-1199 {
-      padding: 30px;
-    }
-
-    @include vp-767 {
-      padding: 20px 15px;
-    }
-  }
-
-  &__content {
-    display: grid;
-    grid-column: span 2;
-  }
-
-  &__element h3 {
+  @include hover-focus {
+    background-color: $color-default-white;
     color: $color-cerulean-blue;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 34px;
-    text-align: left;
-    align-self: center;
-    letter-spacing: 0.09px;
-
-    grid-column: 1 / 2;
-
-    margin: 0;
-    padding: 0;
-
-    @include vp-1199 {
-      font-size: 22px;
-      line-height: 26px;
-    }
-
-    @include vp-767 {
-      font-size: 16px;
-      line-height: 18px;
-    }
-  }
-
-  &__element p {
-    margin: 0;
-    padding: 20px 0 0 0;
-    width: 637px;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 26px;
-    color: $color-default-white;
-
-    @include vp-1199 {
-      width: 100%;
-      line-height: 20px;
-
-      color: $color-alabaster;
-    }
-
-    @include vp-767 {
-      width: 100%;
-      font-size: 14px;
-    }
-  }
-
-  &__button {
-    position: relative;
-
-    width: 42px;
-    height: 42px;
-    box-sizing: border-box;
-
-    border-radius: 50%;
-    background-color: $color-cerulean-blue;
-    border: 1px solid $color-cerulean-blue;
-
-    grid-column: 2 / 3;
-
-    margin: 0 0 0 auto;
-    cursor: pointer;
-
-    @include vp-1199 {
-      margin: 0;
-      width: 40px;
-      height: 40px;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 11px;
-      top: 19px;
-      width: 18px;
-      height: 1px;
-      background-color: $color-default-white;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 11px;
-      top: 19px;
-      width: 18px;
-      height: 1px;
-      background-color: $color-default-white;
-      transform: rotate(90deg);
-    }
-
-    @include hover-focus {
+    .accordion__button {
       background-color: $color-default-white;
       border: 1px solid $color-cerulean-blue;
 
@@ -146,33 +42,201 @@
     }
   }
 
-  &__element.is-active > &__button {
+  @include active {
     background-color: $color-default-white;
-    margin: 0;
+    color: $color-endeavour;
+    border: 1px solid $color-endeavour;
 
-    &::after {
-      transform: none;
-      background-color: $color-cerulean-blue;
+    .accordion__button {
+      background-color: $color-endeavour;
+      border: 1px solid $color-endeavour;
+
+      &::before {
+        background-color: $color-default-white;
+      }
+
+      &::after {
+        background-color: $color-default-white;
+      }
     }
   }
 
-  &__element.is-active {
+  @include vp-1199 {
+    padding: 30px;
+  }
+
+  @include vp-767 {
+    padding: 20px 15px;
+  }
+}
+
+.accordion__element:last-child {
+  margin-bottom: 0;
+}
+
+.accordion__content {
+  display: grid;
+  grid-column: span 2;
+}
+
+.accordion__element h3 {
+  color: $color-cerulean-blue;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px;
+  text-align: left;
+  align-self: center;
+  letter-spacing: 0.09px;
+
+  grid-column: 1 / 2;
+
+  margin: 0;
+  padding: 0;
+
+  @include vp-1199 {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.accordion__element p {
+  margin: 0;
+  padding: 20px 0 0 0;
+  width: 637px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  color: $color-default-white;
+
+  @include vp-1199 {
+    width: 100%;
+    line-height: 20px;
+
+    color: $color-alabaster;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+.accordion__button {
+  position: relative;
+
+  width: 42px;
+  height: 42px;
+  box-sizing: border-box;
+  align-self: center;
+
+  border-radius: 50%;
+  background-color: $color-cerulean-blue;
+  border: 1px solid $color-cerulean-blue;
+
+  grid-column: 2 / 3;
+
+  margin: 0 0 0 auto;
+  cursor: pointer;
+
+  @include vp-1199 {
+    margin: 0;
+    width: 40px;
+    height: 40px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 11px;
+    top: 19px;
+    width: 18px;
+    height: 1px;
+    background-color: $color-default-white;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 11px;
+    top: 19px;
+    width: 18px;
+    height: 1px;
+    background-color: $color-default-white;
+    transform: rotate(90deg);
+  }
+}
+
+.accordion__element.is-active > .accordion__button {
+  background-color: $color-default-white;
+  margin: 0;
+  align-self: self-start;
+  justify-self: end;
+
+  &::after {
+    transform: none;
     background-color: $color-cerulean-blue;
   }
+}
 
-  &__element.is-active h3 {
+.accordion__element.is-active {
+  background-color: $color-cerulean-blue;
+
+  @include hover-focus {
+    background-color: $color-cerulean-blue;
     color: $color-default-white;
-  }
 
-  &__element.is-active p {
-    color: $color-default-white;
+    .accordion__button {
+      background-color: transparent;
+      border: 1px solid $color-default-white;
 
-    @include vp-1199 {
-      color: $color-alabaster;
+      &::before {
+        background-color: $color-default-white;
+      }
+
+      &::after {
+        background-color: $color-default-white;
+      }
     }
   }
 
-  &__wrapper {
-    padding: 0;
+  @include active {
+    background-color: $color-endeavour;
+    color: $color-default-white;
+
+    .accordion__button {
+      background-color: $color-default-white;
+      border: 1px solid $color-default-white;
+
+      &::before {
+        background-color: $color-endeavour;
+      }
+
+      &::after {
+        background-color: $color-endeavour;
+      }
+    }
   }
+}
+
+.accordion__element.is-active h3 {
+  color: $color-default-white;
+}
+
+.accordion__element.is-active p {
+  color: $color-default-white;
+
+  @include vp-1199 {
+    color: $color-alabaster;
+  }
+}
+
+.accordion__wrapper {
+  padding: 0;
 }

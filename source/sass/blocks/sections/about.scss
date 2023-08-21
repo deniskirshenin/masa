@@ -10,7 +10,8 @@
   grid-auto-flow: dense row;
   gap: 60px;
 
-  width: 1240px;
+  min-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
   padding: 120px 0;
 
