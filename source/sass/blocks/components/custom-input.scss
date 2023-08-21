@@ -1,110 +1,70 @@
-.custom-input,
-.custom-textarea {
+.custom-input {
   position: relative;
 
   display: flex;
   width: 100%;
-  padding: 14px 0 28px;
 
-  @media screen and (max-width: 767px) {
-    padding: 4px 0 48px;
-    width: 100%;
-  }
-
-  label {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-
-    @media screen and (max-width: 767px) {
-      align-items: flex-start;
-      flex-direction: column;
+  @include hover {
+    .custom-input__label {
+      opacity: 1;
     }
 
-    input,
-    textarea {
-      flex-grow: 1;
-      max-width: 300px;
-      min-height: 48px;
-      padding: 10px;
-
-      border: 2px solid rgba(#000000, 0.2);
-      border-radius: 5px;
-      outline: none;
-
-      transition: border 0.3s ease;
-
-      @media screen and (max-width: 767px) {
-        max-width: unset;
-        width: 100%;
-      }
-
-      &:hover {
-        border: 2px solid rgba(#000000, 0.5);
-      }
-
-      &:focus {
-        border: 2px solid rgba(#000000, 0.8);
-      }
-    }
-  }
-
-  &__label {
-    @media screen and (max-width: 767px) {
-      margin: 0 0 18px 0;
-    }
-  }
-
-  &__error {
-    position: absolute;
-    right: 0;
-    bottom: 35px;
-
-    color: #ff1553;
-
-    opacity: 0;
-
-    transition: opacity 0.3s ease;
-
-    @media screen and (max-width: 767px) {
-      bottom: 20px;
-    }
-  }
-
-  &.is-invalid {
-    input,
-    textarea {
-      border: 2px solid #ff1553;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba(#ff1553, 0.5);
-      }
-    }
-  }
-
-  &.is-valid {
     input {
-      border: 2px solid #22b259;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba(#22b259, 0.5);
-      }
+      border: 1px solid $color-default-black;
     }
   }
 
-  .input-message {
-    position: absolute;
-    right: 0;
-    bottom: -5px;
-
-    &.is-invalid {
-      color: #ff0000;
+  @include focus {
+    .custom-input__label {
+      opacity: 1;
     }
 
-    &.is-valid {
-      color: #15ab07;
+    input {
+      border: 1px solid $color-default-black;
     }
   }
+
+  @include active {
+    .custom-input__label {
+      opacity: 1;
+    }
+
+    input {
+      border: 1px solid $color-default-black;
+    }
+  }
+}
+
+.custom-input label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+}
+
+.custom-input input {
+  flex-grow: 1;
+  width: 100%;
+  min-height: 48px;
+  padding: 16px 25px;
+
+  border: 1px solid $color-transparent-black;
+  border-radius: 8px;
+  outline: none;
+
+  transition: border 0.3s ease;
+}
+
+.custom-input.is-invalid input {
+  border: 1px solid $color-wild-watermelon;
+  background-color: $color-background-error;
+}
+
+.custom-input__label {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  color: $color-default-black;
+  opacity: 0.8;
 }

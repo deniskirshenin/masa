@@ -5,21 +5,8 @@
   font-weight: 300;
 
   display: flex;
-  width: 500px;
-  padding: 14px 0 10px 36px;
-
-  label {
-    position: relative;
-
-    padding-left: 52px;
-
-    cursor: pointer;
-
-    span {
-      margin-bottom: 0;
-      margin-left: 0;
-    }
-  }
+  width: 100%;
+  padding: 0;
 
   &.is-invalid {
     label span {
@@ -40,6 +27,20 @@
       color: #15ab07;
     }
   }
+}
+
+.custom-toggle label {
+  position: relative;
+
+  padding: 5.5px 0 5.5px 30px;
+
+  cursor: pointer;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+  color: $color-default-black;
+  opacity: 0.8;
 }
 
 .custom-toggle input {
