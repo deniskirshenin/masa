@@ -68,7 +68,7 @@
   &::after {
     content: "";
     position: absolute;
-    background: url("../../../img/svg/angle-desktop-program.svg") no-repeat;
+    background: url("../../img/svg/angle-desktop-program.svg") no-repeat;
     width: 18px;
     height: 18px;
     right: -18px;
@@ -79,7 +79,7 @@
     }
 
     @include vp-767 {
-      background: url("../../../img/svg/angle-program-mobile.svg") no-repeat;
+      background: url("../../img/svg/angle-program-mobile.svg") no-repeat;
       width: 18px;
       height: 18px;
       right: -18px;
