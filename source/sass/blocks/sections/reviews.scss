@@ -17,7 +17,7 @@
   row-gap: 40px;
 
   @include vp-1199 {
-    min-width: 100%;
+    min-width: unset;
     max-width: 100%;
     width: 100%;
     padding: 100px 0 100px 45px;
@@ -107,7 +107,7 @@
 
   @include vp-1199 {
     grid-column-start: 6;
-    margin: 0 0 0 auto;
+    margin: 0 45px 0 auto;
   }
 
   @include vp-767 {

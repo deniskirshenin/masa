@@ -17,6 +17,7 @@
   @include vp-1199 {
     padding: 0 0 100px 45px;
     width: 100%;
+    min-width: unset;
   }
 
   @include vp-767 {
@@ -60,6 +61,7 @@
 
   @include vp-1199 {
     width: 100%;
+    min-width: unset;
     grid-column: span 12;
   }
 
@@ -127,6 +129,7 @@
 
   @include vp-1199 {
     grid-column-start: 6;
+    margin: 0 45px 0 0;
   }
 
   @include vp-767 {

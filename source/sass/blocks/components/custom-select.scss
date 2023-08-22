@@ -167,6 +167,28 @@
   @include vp-767 {
     width: 100%;
   }
+
+  @include hover {
+    .custom-select__button--dark-bg {
+      border: 1px solid $color-default-white;
+    }
+  }
+
+  @include focus {
+    .custom-select__button--dark-bg {
+      border: 1px solid $color-default-white;
+    }
+  }
+
+  @include active {
+    .custom-select__button--dark-bg {
+      border: 1px solid $color-default-white;
+    }
+  }
+}
+
+.custom-select--dark-bg.is-open .custom-select__button--dark-bg {
+  border: 1px solid $color-default-white;
 }
 
 .custom-select__button {

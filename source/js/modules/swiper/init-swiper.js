@@ -42,6 +42,10 @@ const setContentHeightAndPosition = (swiper) => {
 
 const initHeroSwiper = () => {
   heroSwiper = new Swiper(hero, {
+    initialSlide: 2,
+    autoplay: {
+      delay: 3000,
+    },
     loop: true,
     slidesPerView: 1,
     speed: 300,
@@ -50,7 +54,6 @@ const initHeroSwiper = () => {
       clickable: true,
       type: 'bullets',
     },
-    initialSlide: 3,
   });
 
   setContentHeightAndPosition(heroSwiper);

@@ -2124,6 +2124,7 @@ button,
 @media (max-width: 767px) {
   .btn__icon {
     min-width: 34px;
+    width: 34px;
     height: 34px;
     padding: 12px;
   }
@@ -2174,6 +2175,10 @@ button,
 @media (max-width: 767px) {
   .btn {
     padding: 3px 3px 3px 20px;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.24px;
+    text-transform: uppercase;
   }
 }
 .btn:disabled {
@@ -3348,6 +3353,24 @@ button,
     width: 100%;
   }
 }
+@media (hover: hover) {
+  .custom-select--dark-bg:hover:not(.focus-visible) .custom-select__button--dark-bg {
+    border: 1px solid #ffffff;
+  }
+}
+.custom-select--dark-bg.focus-visible:focus .custom-select__button--dark-bg {
+  border: 1px solid #ffffff;
+}
+.custom-select--dark-bg.focus-visible:active .custom-select__button--dark-bg {
+  border: 1px solid #ffffff;
+}
+.custom-select--dark-bg:active .custom-select__button--dark-bg {
+  border: 1px solid #ffffff;
+}
+
+.custom-select--dark-bg.is-open .custom-select__button--dark-bg {
+  border: 1px solid #ffffff;
+}
 
 .custom-select__button {
   display: -webkit-box;
@@ -3482,6 +3505,7 @@ button,
 @media (max-width: 1199px) {
   .header__wrapper {
     width: 678px;
+    min-width: unset;
   }
 }
 @media (max-width: 767px) {
@@ -3870,9 +3894,9 @@ button,
 }
 @media (max-width: 767px) {
   .footer__list {
-    -webkit-column-gap: 30px;
-       -moz-column-gap: 30px;
-            column-gap: 30px;
+    -webkit-column-gap: 28px;
+       -moz-column-gap: 28px;
+            column-gap: 28px;
     row-gap: 20px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -3883,6 +3907,11 @@ button,
 
 .footer__logo {
   margin: 0 52px 0 0;
+}
+@media (max-width: 767px) {
+  .footer__logo {
+    margin: 0;
+  }
 }
 
 .socials {
@@ -4491,6 +4520,7 @@ button,
 @media (max-width: 1199px) {
   .about__wrapper {
     width: 678px;
+    min-width: unset;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4644,6 +4674,13 @@ button,
 @media (max-width: 767px) {
   .about__btn {
     width: 221px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about__btn span {
+    text-align: left;
+    white-space: nowrap;
   }
 }
 
@@ -4812,6 +4849,7 @@ button,
   .programs__wrapper {
     padding: 0 0 100px 45px;
     width: 100%;
+    min-width: unset;
   }
 }
 @media (max-width: 767px) {
@@ -4872,6 +4910,7 @@ button,
 @media (max-width: 1199px) {
   .programs__slider-wrapper {
     width: 100%;
+    min-width: unset;
     -ms-grid-column-span: 12;
     grid-column: span 12;
   }
@@ -4962,6 +5001,7 @@ button,
   .programs__btn {
     -ms-grid-column: 6;
         grid-column-start: 6;
+    margin: 0 45px 0 0;
   }
 }
 @media (max-width: 767px) {
@@ -5002,6 +5042,7 @@ button,
   height: 100%;
   background-color: rgba(49, 109, 194, 0.2);
   z-index: 1;
+  border-radius: 12px;
 }
 
 .program-card__img {
@@ -5013,6 +5054,7 @@ button,
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -1;
+  border-radius: 12px;
 }
 
 .program-card h3 {
@@ -5230,6 +5272,8 @@ button,
 
 .instruction__image-wrapper img {
   border-radius: 16px;
+  width: 100%;
+  height: 100%;
 }
 
 .instruction__list-wrapper {
@@ -6199,11 +6243,15 @@ button,
 @media (max-width: 1199px) {
   .accordion__element {
     padding: 30px;
+    -ms-grid-columns: 540px 1fr;
+    grid-template-columns: 540px 1fr;
   }
 }
 @media (max-width: 767px) {
   .accordion__element {
     padding: 20px 15px;
+    -ms-grid-columns: 190px 1fr;
+    grid-template-columns: 190px 1fr;
   }
 }
 
@@ -6216,6 +6264,18 @@ button,
   display: grid;
   -ms-grid-column-span: 2;
   grid-column: span 2;
+}
+@media (max-width: 1199px) {
+  .accordion__content {
+    -ms-grid-column-span: 1;
+    grid-column: span 1;
+  }
+}
+@media (max-width: 767px) {
+  .accordion__content {
+    -ms-grid-column-span: 2;
+    grid-column: span 2;
+  }
 }
 
 .accordion__element h3 {
@@ -6293,6 +6353,12 @@ button,
     margin: 0;
     width: 40px;
     height: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .accordion__button {
+    -ms-grid-column-align: end;
+        justify-self: end;
   }
 }
 .accordion__button::before {
@@ -6462,7 +6528,7 @@ button,
 }
 @media (max-width: 1199px) {
   .reviews__wrapper {
-    min-width: 100%;
+    min-width: unset;
     max-width: 100%;
     width: 100%;
     padding: 100px 0 100px 45px;
@@ -6583,7 +6649,7 @@ button,
   .reviews__button-wrapper {
     -ms-grid-column: 6;
         grid-column-start: 6;
-    margin: 0 0 0 auto;
+    margin: 0 45px 0 auto;
   }
 }
 @media (max-width: 767px) {
@@ -6891,7 +6957,7 @@ button,
 }
 @media (max-width: 1199px) {
   .contacts__wrapper dl {
-    gap: 88px;
+    gap: 82px;
     margin: 0;
   }
 }

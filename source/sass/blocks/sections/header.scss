@@ -32,6 +32,7 @@
 
   @include vp-1199 {
     width: 678px;
+    min-width: unset;
   }
 
   @include vp-767 {
