@@ -30,7 +30,7 @@ const setContentHeightAndPosition = (swiper) => {
   const buttonHeight = activeSlide.querySelector('.hero__btn-wrapper').offsetHeight;
   let contentHeight;
   if (window.innerWidth <= 767) {
-    contentHeight = headerHeight + textHeight + buttonHeight + 20;
+    contentHeight = headerHeight + textHeight + buttonHeight + 14;
   } else if (window.innerWidth <= 1199) {
     contentHeight = headerHeight + textHeight + 60;
   } else {

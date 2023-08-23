@@ -10,9 +10,9 @@
   }
 
   @include vp-767 {
+    grid-column: span 1;
     grid-row-start: 4;
     grid-column-start: 1;
-    grid-column: span 1;
     margin: 0 auto;
   }
 }
@@ -26,6 +26,10 @@
   margin: 0;
 
   gap: 20px;
+
+  @include vp-1199 {
+    gap: 10px;
+  }
 }
 
 .socials__item {
@@ -34,4 +38,9 @@
   align-items: center;
   width: 36px;
   height: 36px;
+
+  @include vp-767 {
+    width: 26px;
+    height: 26px;
+  }
 }

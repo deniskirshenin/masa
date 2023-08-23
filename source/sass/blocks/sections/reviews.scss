@@ -6,7 +6,7 @@
 }
 
 .reviews__wrapper {
-  padding: 120px 0;
+  padding: 123px 0 120px 0;
   margin: 0 auto;
   min-width: 1200px;
   max-width: 1240px;
@@ -14,19 +14,21 @@
   display: grid;
   grid-auto-flow: dense row;
   grid-template-columns: repeat(auto-fit, minmax(106px, 1fr));
-  row-gap: 40px;
+  row-gap: 38px;
 
   @include vp-1199 {
     min-width: unset;
     max-width: 100%;
     width: 100%;
-    padding: 100px 0 100px 45px;
+    padding: 100px 0 102px 45px;
+    row-gap: 32px;
   }
 
   @include vp-767 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 67px 15px 67px 15px;
+    padding: 69px 15px 66px 15px;
+    row-gap: 24px;
   }
 }
 
@@ -35,7 +37,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 50px;
-  margin: 0;
+  margin: 0 0 9px 0;
   grid-column: span 3;
   grid-row-start: 1;
   color: $color-cerulean-blue;
@@ -58,6 +60,7 @@
   grid-row-start: 2;
   gap: 40px;
   width: 1240px;
+  overflow: hidden;
 
   @include vp-1199 {
     width: 100%;
@@ -82,6 +85,8 @@
   @include vp-1199 {
     max-width: 560px;
     grid-column: span 5;
+
+    margin: 8px 0 0 0;
   }
 
   @include vp-767 {
@@ -107,12 +112,13 @@
 
   @include vp-1199 {
     grid-column-start: 6;
-    margin: 0 45px 0 auto;
+    margin: 5px 45px 0 auto;
   }
 
   @include vp-767 {
     grid-column-start: 2;
     grid-row-start: 1;
     margin: 0 0 0 auto;
+    align-items: start;
   }
 }

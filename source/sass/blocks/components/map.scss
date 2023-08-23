@@ -3,8 +3,8 @@
   max-width: 1240px;
   background-color: $color-cerulean-blue;
 
-  border-top: 4px solid $color-transparent-white-line;
-
+  border-top: 2px solid $color-transparent-white-line;
+  grid-column: span 2;
 
   @include vp-1199 {
     min-width: 678px;

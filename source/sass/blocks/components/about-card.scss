@@ -1,11 +1,13 @@
 .about-card {
   position: relative;
   display: flex;
-  justify-content: center;
+
   align-items: center;
   gap: 30px;
+  width: 478px;
+  min-height: 120px;
 
-  padding: 30px 60px;
+  padding: 30px 55px;
   border: 1px solid $color-alabaster;
   color: $color-alabaster;
   border-radius: 16px;
@@ -13,15 +15,17 @@
   @include vp-1199 {
     flex-direction: column;
 
-    padding: 30px;
-    gap: 12px;
+    width: 264px;
+    padding: 30px 30px 26px 30px;
+    gap: 6px;
   }
 
   @include vp-767 {
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 8px;
-    padding: 24px 20px 24px 16px;
+    gap: 4px;
+    padding: 20px 16px 22px 19px;
+    width: 240px;
   }
 }
 

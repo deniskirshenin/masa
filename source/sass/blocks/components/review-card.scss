@@ -3,21 +3,23 @@
   flex-direction: column;
   border-radius: 16px;
   border: 1px solid $color-cerulean-blue;
-  gap: 30px;
+  gap: 26px;
 
   min-width: 604px;
   max-width: 604px;
-  padding: 49px;
+  padding: 50px 52px 44px 48px;
 
   @include vp-1199 {
     max-width: 560px;
     min-width: 560px;
+    gap: 24px;
+    padding: 50px 52px 46px 48px;
   }
 
   @include vp-767 {
     max-width: 290px;
     min-width: 290px;
-    padding: 29px 14px;
+    padding: 29px 14px 26px 14px;
     gap: 25px;
   }
 }
@@ -31,7 +33,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 15px;
+    gap: 14px;
   }
 }
 
@@ -43,11 +45,13 @@
 
   @include vp-767 {
     max-width: 130px;
+    gap: 10px;
   }
 }
 
 .review-card__person img {
   border-radius: 90px;
+  background-color: $color-cerulean-blue;
 
   @include vp-767 {
     width: 60px;
@@ -109,14 +113,14 @@
     font-size: 12px;
     line-height: 12px;
     letter-spacing: 0.12px;
-    text-transform: uppercase;
+    text-transform: capitalize;
   }
 }
 
 .review-card__info-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 11px;
+  gap: 5px;
 
   @include vp-767 {
     gap: 8px;
@@ -126,10 +130,14 @@
 .review-card__text-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 12px;
+
+  @include vp-1199 {
+    gap: 16px;
+  }
 
   @include vp-767 {
-    gap: 20px;
+    gap: 14px;
   }
 }
 

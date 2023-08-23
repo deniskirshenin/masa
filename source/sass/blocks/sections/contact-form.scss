@@ -10,19 +10,19 @@
   max-width: 1240px;
 
   margin: 0 auto;
-  padding: 120px 0;
+  padding: 120px 0 30px 0;
   z-index: 1;
 
   @include vp-1199 {
     min-width: 678px;
     width: 678px;
-    padding: 100px 0;
+    padding: 100px 0 0 0;
   }
 
   @include vp-767 {
     min-width: 100%;
     width: 100%;
-    padding: 67px 0;
+    padding: 67px 0 0 0;
   }
 }
 
@@ -39,6 +39,11 @@
     font-size: 28px;
     line-height: 28px;
   }
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
 .contact-form__wrapper p {
@@ -53,6 +58,10 @@
   @include vp-1199 {
     font-size: 16px;
     line-height: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
   }
 }
 
@@ -105,30 +114,28 @@
   width: 100%;
   gap: 12px;
 
-  @media screen and (max-width: 767px) {
-    align-items: flex-start;
-    flex-direction: column;
+  @include vp-1199 {
+    gap: 10px;
   }
 }
 
 .contact-form__input input {
-    flex-grow: 1;
-    max-width: 350px;
-    min-height: 50px;
-    padding: 15px 25px;
+  flex-grow: 1;
+  max-width: 350px;
+  min-height: 50px;
+  padding: 15px 25px;
 
-    border-radius: 8px;
-    border: 1px solid $color-transparent-white-line;
-    background-color: transparent;
-    outline: none;
-    color: $color-default-white;
+  border-radius: 8px;
+  border: 1px solid $color-transparent-white-line;
+  background-color: transparent;
+  outline: none;
+  color: $color-default-white;
 
-    transition: border 0.3s ease;
+  transition: border 0.3s ease;
 
-    @media screen and (max-width: 767px) {
-      max-width: unset;
-      width: 100%;
-    }
+  @include vp-767 {
+    max-width: unset;
+  }
 }
 
 .contact-form__input span,
@@ -183,7 +190,15 @@
 }
 
 .contact-form__button {
-  margin: 20px 0 0 0;
+  margin: 28px 0 0 0;
+  text-align: center;
+  justify-content: flex-end;
+  gap: 110px;
+
+  @include vp-767 {
+    margin: 9px auto 0 0;
+    gap: 75px;
+  }
 }
 
 .contact-form__input {
