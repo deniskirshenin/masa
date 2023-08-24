@@ -43,6 +43,10 @@
   gap: 15px;
   align-items: center;
 
+  @include vp-1199 {
+    max-width: 190px;
+  }
+
   @include vp-767 {
     max-width: 130px;
     gap: 10px;
@@ -66,6 +70,7 @@
   font-weight: 400;
   line-height: 24px;
   margin: 0;
+  word-break: break-all;
 
   color: $color-cerulean-blue;
 
@@ -83,6 +88,7 @@
   display: flex;
   column-gap: 25px;
   margin: 0;
+  max-width: 230px;
 }
 
 .review-card__personal-info dt {
@@ -92,6 +98,7 @@
   line-height: 12px;
   letter-spacing: 0.12px;
   text-transform: uppercase;
+  word-break: break-all;
 
   color: $color-cerulean-blue;
 }

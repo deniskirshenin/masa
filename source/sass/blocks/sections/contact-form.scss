@@ -146,6 +146,7 @@
   line-height: 18px;
   color: $color-alabaster;
   opacity: 0.8;
+  word-break: break-all;
 
   @include vp-1199 {
     line-height: 20px;

@@ -41,6 +41,7 @@
   font-weight: 400;
   line-height: 50px;
   color: $color-default-white;
+  word-break: break-all;
 
   padding: 6px 0 0 0;
 
@@ -102,6 +103,7 @@
   line-height: 12px;
   letter-spacing: 0.12px;
   text-transform: uppercase;
+  word-break: break-all;
 
   color: $color-alabaster;
 }
@@ -111,6 +113,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
+  word-break: break-all;
 
   color: $color-default-white;
 

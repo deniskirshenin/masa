@@ -244,3 +244,13 @@
     opacity: 0.8;
   }
 }
+
+.custom-select.is-invalid {
+  .custom-select__button {
+    border: 1px solid $color-wild-watermelon;
+    background-color: $color-background-error;
+  }
+  .custom-select__icon {
+    background-color: $color-wild-watermelon;
+  }
+}

@@ -34,7 +34,7 @@ const setContentHeightAndPosition = (swiper) => {
   } else if (window.innerWidth <= 1199) {
     contentHeight = headerHeight + textHeight + 60;
   } else {
-    contentHeight = headerHeight + textHeight + 60;
+    contentHeight = headerHeight + textHeight + 59;
   }
 
   heroPagination.style.bottom = contentHeight + 'px';

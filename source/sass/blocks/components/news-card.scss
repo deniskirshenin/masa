@@ -11,13 +11,13 @@
 
   max-width: 286px;
   min-height: 400px;
-  max-height: 400px;
+  max-height: fit-content;
 
   @include vp-1199 {
     min-width: 324px;
     max-width: 324px;
     min-height: 350px;
-    max-height: 350px;
+    height: auto;
 
     grid-template-columns: 207px auto;
   }
@@ -26,7 +26,7 @@
     min-width: 290px;
     max-width: 290px;
     min-height: 240px;
-    max-height: 240px;
+    max-height: unset;
     border-radius: 12px;
   }
 }
@@ -44,13 +44,13 @@
 .news-card:nth-child(-n+2) {
   max-width: 286px;
   min-height: 400px;
-  max-height: 400px;
+  max-height: fit-content;
 
   @include vp-1199 {
     max-width: 324px;
     min-width: 324px;
     min-height: 350px;
-    max-height: 350px;
+    height: auto;
     grid-template-columns: 207px auto;
   }
 
@@ -58,7 +58,7 @@
     max-width: 290px;
     min-width: 290px;
     min-height: 330px;
-    max-height: 330px;
+    max-height: unset;
   }
 }
 
@@ -112,7 +112,7 @@
   &::after {
     content: "";
     position: absolute;
-    background: url("../../img/svg/angle-news-desktop.svg") no-repeat;
+    background: url("../img/svg/angle-news-desktop.svg") no-repeat;
     width: 16px;
     height: 16px;
     right: -16px;
@@ -123,7 +123,7 @@
     }
 
     @include vp-767 {
-      background: url("../../img/svg/angle-news-mobile.svg") no-repeat;
+      background: url("../img/svg/angle-news-mobile.svg") no-repeat;
       width: 16px;
       height: 16px;
       right: -16px;
@@ -228,6 +228,8 @@
   border-radius: 0 12px 0 0;
   border: none;
   align-items: center;
+  word-break: break-all;
+  max-width: 80px;
 
   grid-column: span 1;
   grid-row: span 1;
@@ -253,7 +255,7 @@
   &::after {
     content: "";
     position: absolute;
-    background: url("../../img/svg/angle-news-desktop.svg") no-repeat;
+    background: url("../img/svg/angle-news-desktop.svg") no-repeat;
     width: 16px;
     height: 16px;
     right: -16px;
@@ -264,7 +266,7 @@
     }
 
     @include vp-767 {
-      background: url("../../img/svg/angle-news-mobile.svg") no-repeat;
+      background: url("../img/svg/angle-news-mobile.svg") no-repeat;
       width: 16px;
       height: 16px;
       right: -16px;
@@ -275,7 +277,7 @@
   &::before {
     content: "";
     position: absolute;
-    background: url("../../img/svg/angle-news-desktop.svg") no-repeat;
+    background: url("../img/svg/angle-news-desktop.svg") no-repeat;
     width: 16px;
     height: 16px;
     left: 0;
@@ -286,7 +288,7 @@
     }
 
     @include vp-767 {
-      background: url("../../img/svg/angle-news-mobile.svg") no-repeat;
+      background: url("../img/svg/angle-news-mobile.svg") no-repeat;
       width: 16px;
       height: 16px;
       top: -16px;
@@ -340,7 +342,7 @@
   &::after {
     content: "";
     position: absolute;
-    background: url("../../img/svg/angle-news-desktop.svg") no-repeat;
+    background: url("../img/svg/angle-news-desktop.svg") no-repeat;
     width: 16px;
     height: 16px;
     right: -16px;
@@ -351,7 +353,7 @@
     }
 
     @include vp-767 {
-      background: url("../../img/svg/angle-news-mobile.svg") no-repeat;
+      background: url("../img/svg/angle-news-mobile.svg") no-repeat;
       width: 16px;
       height: 16px;
       right: -16px;

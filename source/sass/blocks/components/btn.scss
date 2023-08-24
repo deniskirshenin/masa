@@ -299,6 +299,7 @@
   font-weight: 400;
   line-height: 26px;
   text-transform: none;
+  word-break: break-all;
 
   @include vp-1199 {
     line-height: 20px;
