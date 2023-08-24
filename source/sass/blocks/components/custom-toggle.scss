@@ -68,8 +68,8 @@
     border: 1px solid $color-default-white;
 
     &::before {
-      background-color: transparent;
       background: url("../img/svg/tick-dark-bg.svg") no-repeat center;
+      background-color: transparent;
     }
   }
 }

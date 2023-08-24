@@ -11,11 +11,11 @@ const programPrevButton = document.querySelector('.programs__button-prev');
 const programScrollbar = document.querySelector('.programs__scrollbar');
 
 const news = document.querySelector('.news__slider-wrapper');
-const newsSlidesContainer = news.querySelector('.swiper-wrapper');
 const newsNextButton = document.querySelector('.news__button-next');
 const newsPrevButton = document.querySelector('.news__button-prev');
 const newsPagination = document.querySelector('.news__pagination');
 const slides = document.querySelectorAll('.news-card');
+const tabButtons = document.querySelectorAll('.news__tabs-button');
 let newsSwiper;
 
 const review = document.querySelector('.reviews__slider-wrapper');
@@ -25,19 +25,27 @@ const reviewScrollbar = document.querySelector('.reviews__scrollbar');
 
 const setContentHeightAndPosition = (swiper) => {
   const activeSlide = swiper.slides[swiper.activeIndex];
-  const headerHeight = activeSlide.querySelector('h2').offsetHeight;
-  const textHeight = activeSlide.querySelector('p').offsetHeight;
-  const buttonHeight = activeSlide.querySelector('.hero__btn-wrapper').offsetHeight;
-  let contentHeight;
-  if (window.innerWidth <= 767) {
-    contentHeight = headerHeight + textHeight + buttonHeight + 14;
-  } else if (window.innerWidth <= 1199) {
-    contentHeight = headerHeight + textHeight + 60;
-  } else {
-    contentHeight = headerHeight + textHeight + 59;
-  }
+  if (activeSlide) {
+    const headerElement = activeSlide.querySelector('h2');
+    const textElement = activeSlide.querySelector('p');
+    const buttonElement = activeSlide.querySelector('.hero__btn-wrapper');
 
-  heroPagination.style.bottom = contentHeight + 'px';
+    if (headerElement && textElement && buttonElement && heroPagination) {
+      const textHeight = textElement.offsetHeight;
+      const buttonHeight = buttonElement.offsetHeight;
+      let contentHeight;
+
+      if (window.innerWidth <= 767) {
+        contentHeight = headerElement.offsetHeight + textHeight + buttonHeight + 14;
+      } else if (window.innerWidth <= 1199) {
+        contentHeight = headerElement.offsetHeight + textHeight + 60;
+      } else {
+        contentHeight = headerElement.offsetHeight + textHeight + 59;
+      }
+
+      heroPagination.style.bottom = contentHeight + 'px';
+    }
+  }
 };
 
 const initHeroSwiper = () => {
@@ -133,7 +141,11 @@ const initNewsSwiper = () => {
     },
   });
 
-  initFilter(newsSlidesContainer, slides, newsSwiper);
+  if (news && slides && newsSwiper && tabButtons) {
+    const newsSlidesContainer = news.querySelector('.swiper-wrapper');
+    initFilter(newsSlidesContainer, slides, newsSwiper, tabButtons);
+  }
+
 };
 
 const initReviewSwiper = () => new Swiper(review, {

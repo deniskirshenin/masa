@@ -3168,23 +3168,23 @@ button,
     border: 1px solid #ffffff;
   }
   .custom-toggle input:checked + .custom-toggle__icon--dark:hover:not(.focus-visible)::before {
-    background-color: transparent;
     background: url("../img/svg/tick-dark-bg.svg") no-repeat center;
+    background-color: transparent;
   }
   .custom-toggle input:checked + .custom-toggle__icon--dark:hover:not(:disabled) {
     border: 1px solid #ffffff;
   }
   .custom-toggle input:checked + .custom-toggle__icon--dark:hover:not(:disabled)::before {
-    background-color: transparent;
     background: url("../img/svg/tick-dark-bg.svg") no-repeat center;
+    background-color: transparent;
   }
 }
 .custom-toggle input:checked + .custom-toggle__icon--dark.focus-visible:focus {
   border: 1px solid #ffffff;
 }
 .custom-toggle input:checked + .custom-toggle__icon--dark.focus-visible:focus::before {
-  background-color: transparent;
   background: url("../img/svg/tick-dark-bg.svg") no-repeat center;
+  background-color: transparent;
 }
 
 .custom-toggle--checkbox-form {
@@ -3875,8 +3875,6 @@ button,
 
 .header__icon-close {
   opacity: 0;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
   pointer-events: none;
   width: 46px;
   height: 46px;
@@ -6993,7 +6991,6 @@ button,
 }
 
 .reviews__button-wrapper {
-  margin: 0 0 0 52px;
   -ms-grid-column-span: 1;
   grid-column: span 1;
   -ms-grid-column: 11;
