@@ -48,7 +48,7 @@
   border: 1.5px solid #2c39f2;
 
   &::before {
-    background: url("../../img/svg/tick.svg") no-repeat center;
+    background: url("../img/svg/tick.svg") no-repeat center;
     background-size: 10px 10px;
     background-color: $color-cerulean-blue;
   }

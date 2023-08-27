@@ -11,13 +11,12 @@
 
   max-width: 286px;
   min-height: 400px;
-  max-height: fit-content;
+  height: auto;
 
   @include vp-1199 {
     min-width: 324px;
     max-width: 324px;
     min-height: 350px;
-    height: auto;
 
     grid-template-columns: 207px auto;
   }

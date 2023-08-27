@@ -127,7 +127,7 @@
 .news__button-prev {
   grid-column: span 1;
   max-height: 22px;
-  margin: 5px 0 0 0;
+  margin: 5px 0 5px 0;
 
   @include vp-1199 {
     margin: 10px 0 0 0;
@@ -141,7 +141,7 @@
 .news__button-next {
   grid-column: span 1;
   max-height: 22px;
-  margin: 5px 0 0 0;
+  margin: 5px 0 5px 0;
 
   @include vp-1199 {
     margin: 10px 0 0 0;

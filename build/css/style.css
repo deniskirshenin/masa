@@ -3149,7 +3149,7 @@ button,
   border: 1.5px solid #2c39f2;
 }
 .custom-toggle input:checked + .custom-toggle__icon::before {
-  background: url("../../img/svg/tick.svg") no-repeat center;
+  background: url("../img/svg/tick.svg") no-repeat center;
   background-size: 10px 10px;
   background-color: #316dc2;
 }
@@ -3638,13 +3638,13 @@ button,
   top: 88px;
   -webkit-transition: background-color 0.3s ease, height 0.3s ease, opacity 0.3s ease;
   transition: background-color 0.3s ease, height 0.3s ease, opacity 0.3s ease;
-  right: 100px;
+  right: calc((100% - 1440px) / 2 + 100px);
   visibility: hidden;
   z-index: 20;
 }
 @media (max-width: 1199px) {
   .header__nav {
-    right: 45px;
+    right: calc((100% - 768px) / 2 + 45px);
   }
 }
 @media (max-width: 767px) {
@@ -3786,6 +3786,7 @@ button,
 }
 
 .is-open .header__burger {
+  position: relative;
   opacity: 1;
   pointer-events: all;
   -webkit-transition: opacity 0.3s ease 0.2s;
@@ -5808,7 +5809,7 @@ button,
   -ms-grid-column-span: 1;
   grid-column: span 1;
   max-height: 22px;
-  margin: 5px 0 0 0;
+  margin: 5px 0 5px 0;
 }
 @media (max-width: 1199px) {
   .news__button-prev {
@@ -5826,7 +5827,7 @@ button,
   -ms-grid-column-span: 1;
   grid-column: span 1;
   max-height: 22px;
-  margin: 5px 0 0 0;
+  margin: 5px 0 5px 0;
 }
 @media (max-width: 1199px) {
   .news__button-next {
@@ -6011,16 +6012,13 @@ button,
   z-index: 0;
   max-width: 286px;
   min-height: 400px;
-  max-height: -webkit-fit-content;
-  max-height: -moz-fit-content;
-  max-height: fit-content;
+  height: auto;
 }
 @media (max-width: 1199px) {
   .news-card {
     min-width: 324px;
     max-width: 324px;
     min-height: 350px;
-    height: auto;
     -ms-grid-columns: 207px auto;
     grid-template-columns: 207px auto;
   }
