@@ -865,20 +865,20 @@
           <p>Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;&mdash; мы&nbsp;на&nbsp;них ответим!</p>
           <div class="modal__form" data-form-validate data-callback="base">
             <form method="post" action="https://echo.htmlacademy.ru/">
-              <div class="custom-input" data-validate-type="text" data-limitation="name" data-required>
+              <div class="custom-input custom-input--modal" data-validate-type="text" data-limitation="name" data-required>
                 <label>
                   <span class="custom-input__label">Имя</span>
                   <input type="text" name="name" id="name-modal" required>
                 </label>
               </div>
-              <div class="custom-input" data-validate-type="phone" data-required>
+              <div class="custom-input custom-input--modal" data-validate-type="phone" data-required>
                 <label>
                   <span class="custom-input__label">Телефон</span>
                   <input type="tel" name="tel" id="tel-modal" required>
                 </label>
               </div>
-              <div class="custom-select" data-select="data-select" data-validate-type="select" data-name="some-name" data-id="id-example-1">
-                <span class="custom-select__placeholder">Выберите город</span>
+              <div class="custom-select custom-select--modal" data-select="data-select" data-validate-type="select" data-name="some-name" data-id="id-example-1">
+                <span class="custom-select__placeholder custom-select__placeholder--modal">Выберите город</span>
                 <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
                   <span class="custom-select__text"></span>
                   <span class="custom-select__icon"></span>
@@ -890,10 +890,10 @@
                   <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Санкт-Петербург</li>
                 </ul>
               </div>
-              <div class="custom-toggle custom-toggle--checkbox" data-required>
+              <div class="custom-toggle custom-toggle--checkbox custom-toggle--modal" data-required>
                 <label>
                   <input type="checkbox" name="checkbox" id="checkbox-form">
-                  <span class="custom-toggle__icon"></span> Я согласен на обработку персональных данных </label>
+                  <span class="custom-toggle__icon"></span> Я согласен на обработку моих персональных данных </label>
               </div>
               <button class="btn modal__btn" type="submit">
                 <span>отправить</span>

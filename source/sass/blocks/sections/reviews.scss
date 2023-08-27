@@ -97,6 +97,11 @@
 .reviews__scrollbar .swiper-scrollbar-drag {
   background-color: $color-cerulean-blue;
   min-height: 4px;
+  min-width: 392px;
+
+  @include vp-1199 {
+    min-width: 324px;
+  }
 }
 
 .reviews__button-wrapper {

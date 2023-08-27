@@ -68,3 +68,10 @@
   color: $color-default-black;
   opacity: 0.8;
 }
+
+.custom-input--modal input {
+  @include vp-767 {
+    min-height: 44px;
+    padding: 12px 25px;
+  }
+}

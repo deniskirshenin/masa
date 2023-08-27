@@ -38,9 +38,9 @@ const setContentHeightAndPosition = (swiper) => {
       if (window.innerWidth <= 767) {
         contentHeight = headerElement.offsetHeight + textHeight + buttonHeight + 14;
       } else if (window.innerWidth <= 1199) {
-        contentHeight = headerElement.offsetHeight + textHeight + 60;
+        contentHeight = headerElement.offsetHeight + textHeight + 57;
       } else {
-        contentHeight = headerElement.offsetHeight + textHeight + 59;
+        contentHeight = headerElement.offsetHeight + textHeight + 55;
       }
 
       heroPagination.style.bottom = contentHeight + 'px';
@@ -51,9 +51,9 @@ const setContentHeightAndPosition = (swiper) => {
 const initHeroSwiper = () => {
   heroSwiper = new Swiper(hero, {
     initialSlide: 2,
-    autoplay: {
-      delay: 3000,
-    },
+    // autoplay: {
+    //   delay: 3000,
+    // },
     loop: true,
     slidesPerView: 1,
     speed: 300,
@@ -95,7 +95,6 @@ const initProgramSwiper = () => new Swiper(program, {
     el: programScrollbar,
     hide: false,
     draggable: false,
-    dragSize: 392,
   },
 });
 
@@ -172,7 +171,6 @@ const initReviewSwiper = () => new Swiper(review, {
     el: reviewScrollbar,
     hide: false,
     draggable: false,
-    dragSize: 392,
   },
 });
 

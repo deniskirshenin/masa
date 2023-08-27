@@ -255,3 +255,30 @@
     background-color: $color-wild-watermelon;
   }
 }
+
+.custom-select__placeholder--modal {
+  color: $color-default-black;
+}
+
+.custom-select span {
+  @include vp-767 {
+    color: $color-default-black;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+.custom-select--modal {
+  @include vp-767 {
+    gap: 6px;
+  }
+}
+
+.custom-select--modal .custom-select__button {
+  @include vp-767 {
+    min-height: 44px;
+    padding: 12px 19px;
+  }
+}
