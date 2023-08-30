@@ -2,8 +2,6 @@ import Swiper from '../../vendor/swiper';
 import {initFilter} from '../filter/init-filter';
 
 const hero = document.querySelector('.hero__wrapper');
-const heroPagination = document.querySelector('.hero__pagination');
-let heroSwiper;
 
 const program = document.querySelector('.programs__slider-wrapper');
 const programNextButton = document.querySelector('.programs__button-next');
@@ -23,53 +21,22 @@ const reviewNextButton = document.querySelector('.reviews__button-next');
 const reviewPrevButton = document.querySelector('.reviews__button-prev');
 const reviewScrollbar = document.querySelector('.reviews__scrollbar');
 
-const setContentHeightAndPosition = (swiper) => {
-  const activeSlide = swiper.slides[swiper.activeIndex];
-  if (activeSlide) {
-    const headerElement = activeSlide.querySelector('h2');
-    const textElement = activeSlide.querySelector('p');
-    const buttonElement = activeSlide.querySelector('.hero__btn-wrapper');
+const initHeroSwiper = () => new Swiper(hero, {
+  initialSlide: 2,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  loop: true,
+  slidesPerView: 1,
+  speed: 300,
+  pagination: {
+    el: '.hero__pagination',
+    clickable: true,
+    type: 'bullets',
+  },
+});
 
-    if (headerElement && textElement && buttonElement && heroPagination) {
-      const textHeight = textElement.offsetHeight;
-      const buttonHeight = buttonElement.offsetHeight;
-      let contentHeight;
-
-      if (window.innerWidth <= 767) {
-        contentHeight = headerElement.offsetHeight + textHeight + buttonHeight + 14;
-      } else if (window.innerWidth <= 1199) {
-        contentHeight = headerElement.offsetHeight + textHeight + 57;
-      } else {
-        contentHeight = headerElement.offsetHeight + textHeight + 55;
-      }
-
-      heroPagination.style.bottom = contentHeight + 'px';
-    }
-  }
-};
-
-const initHeroSwiper = () => {
-  heroSwiper = new Swiper(hero, {
-    initialSlide: 2,
-    autoplay: {
-      delay: 3000,
-    },
-    loop: true,
-    slidesPerView: 1,
-    speed: 300,
-    pagination: {
-      el: heroPagination,
-      clickable: true,
-      type: 'bullets',
-    },
-  });
-
-  setContentHeightAndPosition(heroSwiper);
-
-  heroSwiper.on('slideChange', () => {
-    setContentHeightAndPosition(heroSwiper);
-  });
-};
 
 const initProgramSwiper = () => new Swiper(program, {
   direction: 'horizontal',

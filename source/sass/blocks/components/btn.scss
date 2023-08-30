@@ -4,19 +4,19 @@
   align-items: center;
   min-width: 10px;
   min-height: 10px;
-  width: 46px;
-  height: 46px;
   padding: 18px;
   border-radius: 44px;
   background-color: $color-cerulean-blue;
   color: $color-default-white;
   transform: rotate(-45deg);
+  box-sizing: content-box;
 
   @include vp-767 {
     min-width: 34px;
     width: 34px;
     height: 34px;
     padding: 12px;
+    box-sizing: border-box;
   }
 }
 
@@ -44,6 +44,7 @@
   border: 1px solid $color-cerulean-blue;
   border-radius: 30px;
   cursor: pointer;
+  user-select: none;
 
   transition: opacity $trans-default;
 

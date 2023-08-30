@@ -1,11 +1,16 @@
 .news {
   width: 100%;
+  padding: 0 20px;
+  overflow: hidden;
+
+  @include vp-1199 {
+    padding: 0;
+  }
 }
 
 .news__wrapper {
   padding: 122px 0 125px 0;
   margin: 0 auto;
-  min-width: 1200px;
   max-width: 1240px;
 
   display: grid;
@@ -92,6 +97,10 @@
   width: 810px;
   margin: 0 auto;
   overflow: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   @include vp-1199 {
     width: 678px;

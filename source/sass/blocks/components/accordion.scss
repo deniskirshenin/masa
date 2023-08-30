@@ -183,6 +183,32 @@
     background-color: $color-default-white;
     transform: rotate(90deg);
   }
+
+  @include hover-focus {
+    background-color: $color-default-white;
+    border: 1px solid $color-cerulean-blue;
+
+    &::before {
+      background-color: $color-cerulean-blue;
+    }
+
+    &::after {
+      background-color: $color-cerulean-blue;
+    }
+  }
+
+  @include active {
+    background-color: $color-endeavour;
+    border: 1px solid $color-endeavour;
+
+    &::before {
+      background-color: $color-default-white;
+    }
+
+    &::after {
+      background-color: $color-default-white;
+    }
+  }
 }
 
 .accordion__element.is-active > .accordion__button {
@@ -194,6 +220,32 @@
   &::after {
     transform: none;
     background-color: $color-cerulean-blue;
+  }
+
+  @include hover-focus {
+    background-color: transparent;
+    border: 1px solid $color-default-white;
+
+    &::before {
+      background-color: $color-default-white;
+    }
+
+    &::after {
+      background-color: $color-default-white;
+    }
+  }
+
+  @include active {
+    background-color: $color-default-white;
+    border: 1px solid $color-default-white;
+
+    &::before {
+      background-color: $color-endeavour;
+    }
+
+    &::after {
+      background-color: $color-endeavour;
+    }
   }
 }
 

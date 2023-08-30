@@ -2,10 +2,14 @@
   width: 100%;
   background-color: $color-alabaster;
   color: $color-cerulean-blue;
+  padding: 0 20px;
+
+  @include vp-1199 {
+    padding: 0;
+  }
 }
 
 .programs__wrapper {
-  min-width: 1200px;
   max-width: 1240px;
   display: grid;
   grid-auto-flow: dense row;
@@ -54,12 +58,9 @@
 .programs__slider-wrapper {
   display: flex;
   flex-direction: column;
-  grid-column: span 10;
-  grid-column-start: 1;
-  grid-column-end: -1;
+  grid-column: 1 / -1;
   grid-row-start: 2;
   gap: 40px;
-  min-width: 1200px;
   max-width: 100%;
   margin: 5px 0 0 0;
 
@@ -81,7 +82,7 @@
   min-height: 4px;
   max-height: 4px;
   background-color: $color-transparent-blue-scrollbar;
-  grid-column: span 13;
+  grid-column: span 12;
   grid-row-start: 3;
   align-self: center;
 
@@ -107,7 +108,7 @@
 
 .programs__button-wrapper {
   grid-column: span 1;
-  grid-column-start: 14;
+  grid-column-start: 13;
   grid-column-end: -1;
   grid-row-start: 3;
   width: 54px;

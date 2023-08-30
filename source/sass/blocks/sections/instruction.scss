@@ -2,14 +2,25 @@
   width: 100%;
   background-color: $color-cerulean-blue;
   color: $color-default-white;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include vp-1199 {
+    padding: 0;
+  }
 }
 
 .instruction__wrapper {
-  padding: 120px 100px 107px 100px;
-  display: flex;
+  padding: 120px 0 107px 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 498px);
+  max-width: 1240px;
+  column-gap: 138px;
 
   @include vp-1199 {
     padding: 96px 45px 98px 45px;
+    display: flex;
     flex-direction: column;
     gap: 40px;
   }
@@ -25,7 +36,6 @@
   flex-direction: column;
   gap: 30px;
   width: 498px;
-  margin: 0 138px 0 0;
 
   @include vp-1199 {
     width: 678px;
