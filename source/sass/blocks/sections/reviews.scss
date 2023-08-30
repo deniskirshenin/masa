@@ -4,6 +4,10 @@
   color: $color-cerulean-blue;
   overflow: hidden;
   padding: 0 20px;
+
+  @include vp-1199 {
+    padding: 0;
+  }
 }
 
 .reviews__wrapper {
@@ -69,7 +73,6 @@
 
   @include vp-767 {
     grid-column: span 2;
-    width: 290px;
   }
 }
 
