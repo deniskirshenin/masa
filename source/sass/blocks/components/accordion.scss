@@ -14,6 +14,7 @@
   display: grid;
 
   grid-template-columns: 640px 1fr;
+  grid-template-rows: 1fr auto;
   column-gap: 10px;
   border-radius: 16px;
   border: 1px solid $color-cerulean-blue;
