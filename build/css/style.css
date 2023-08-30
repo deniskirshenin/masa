@@ -6777,6 +6777,8 @@ button,
   display: grid;
   -ms-grid-columns: 640px 1fr;
   grid-template-columns: 640px 1fr;
+  -ms-grid-rows: 1fr auto;
+  grid-template-rows: 1fr auto;
   -webkit-column-gap: 10px;
      -moz-column-gap: 10px;
           column-gap: 10px;
@@ -7226,8 +7228,7 @@ button,
 }
 
 [data-accordion=element].is-active > [data-accordion=content] {
-  min-height: 100%;
-  overflow: hidden;
+  max-height: 100%;
 }
 
 [data-accordion=parent].no-transition [data-accordion=content] {
