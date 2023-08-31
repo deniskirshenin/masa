@@ -5539,14 +5539,7 @@ button,
   background-color: #316dc2;
 }
 
-.review-card p {
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-  margin: 0;
-  color: #316dc2;
-}
+
 
 .review-card__personal-info dl {
   display: -webkit-box;
@@ -5616,6 +5609,15 @@ button,
   line-height: 26px;
   margin: 0;
   color: #484848;
+}
+
+.review-card p {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+  color: #316dc2;
 }
 
 .contacts {
