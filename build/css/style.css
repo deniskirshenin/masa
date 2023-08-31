@@ -5432,10 +5432,17 @@ button,
 }
 @media (max-width: 767px) {
   .program-card {
+    -ms-grid-columns: 199px 71px;
+    grid-template-columns: 199px 71px;
+    -ms-grid-rows: auto 42px 68px;
+    grid-template-rows: auto 42px 68px;
     padding: 271px 10px 18px 10px;
     min-height: 400px;
+    height: auto;
     max-width: unset;
     width: 100%;
+    border-radius: 12px;
+    aspect-ratio: 29/40;
   }
 }
 .program-card::after {
@@ -5496,6 +5503,8 @@ button,
     font-weight: 400;
     line-height: 18px;
     width: 146px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
   }
 }
 .program-card h3::after {
@@ -5558,7 +5567,9 @@ button,
   .program-card p {
     font-size: 12px;
     line-height: 14px;
-    padding: 9px 0 15px 18px;
+    padding: 11px 0 15px 18px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
   }
 }
 
@@ -5595,6 +5606,8 @@ button,
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
   }
 }
 
