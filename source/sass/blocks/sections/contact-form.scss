@@ -200,6 +200,10 @@
   justify-content: flex-end;
   gap: 110px;
 
+  @include vp-1199 {
+    gap: 110px;
+  }
+
   @include vp-767 {
     margin: 9px 0 0 0;
     gap: 75px;
