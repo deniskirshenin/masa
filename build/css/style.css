@@ -6705,10 +6705,6 @@ button,
     max-width: 190px;
   }
 
-  .review-card p {
-    font-size: 20px;
-  }
-
   .review-card__personal-info dd {
     line-height: 20px;
   }
@@ -6724,6 +6720,10 @@ button,
 
   .review-card__text-wrapper p {
     line-height: 20px;
+  }
+
+  .review-card p {
+    font-size: 20px;
   }
 
   .contacts__wrapper {
