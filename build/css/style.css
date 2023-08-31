@@ -6852,6 +6852,14 @@ button,
     padding: 7px;
   }
 
+  .btn--secondary {
+    padding: 10px;
+  }
+
+  .btn--arrow {
+    padding: 6px;
+  }
+
   .btn--tabs {
     font-size: 12px;
     font-style: normal;

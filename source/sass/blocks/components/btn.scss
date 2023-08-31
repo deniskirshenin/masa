@@ -125,6 +125,10 @@
   background-color: $color-cerulean-blue;
   transform: rotate(-45deg);
 
+  @include vp-767 {
+    padding: 10px;
+  }
+
   @include hover-focus {
     background-color: $color-default-white;
     color: $color-cerulean-blue;
@@ -143,6 +147,10 @@
   color: $color-cerulean-blue;
   background-color: transparent;
   border: none;
+
+  @include vp-767 {
+    padding: 6px;
+  }
 
   @include hover-focus {
     border-radius: 30px;
